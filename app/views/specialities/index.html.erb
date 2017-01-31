@@ -1,0 +1,40 @@
+<%= render 'helpersLayout/header' %>
+
+<p id="notice"><%= notice %></p>
+<section class="espe">
+
+
+  <h1>Specialities</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Morningturn</th>
+        <th>Eveningturn</th>
+        <th>Morningclasses</th>
+        <th>Eveningclasses</th>
+        <th>Numberstudents</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @specialities.each do |speciality| %>
+        <tr>
+          <td><%= speciality.name %></td>
+          <td><%= speciality.morningTurn %></td>
+          <td><%= speciality.eveningTurn %></td>
+          <td><%= speciality.morningClasses %></td>
+          <td><%= speciality.eveningClasses %></td>
+          <td><%= speciality.numberStudents %></td>
+          <td><%= link_to 'Show', speciality %></td>
+          <td><%= link_to 'Edit', edit_speciality_path(speciality) %></td>
+          <td><%= link_to 'Destroy', speciality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
+
+<%= link_to 'New Speciality', new_speciality_path %>

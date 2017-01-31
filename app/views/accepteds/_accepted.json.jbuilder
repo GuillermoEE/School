@@ -1,0 +1,2 @@
+json.extract! accepted, :id, :name, :apellidoPaterno, :apellidoMaterno, :examMark, :schoolAverage, :speciality, :secondSpeciality, :finalSpeciality, :turn, :group, :created_at, :updated_at
+json.url accepted_url(accepted, format: :json)

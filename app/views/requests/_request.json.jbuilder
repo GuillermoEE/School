@@ -1,0 +1,2 @@
+json.extract! request, :id, :name, :apellidoPaterno, :apellidoMaterno, :examMark, :schoolAverage, :isForeign, :speciality, :secondSpeciality, :created_at, :updated_at
+json.url request_url(request, format: :json)

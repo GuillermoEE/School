@@ -1,0 +1,122 @@
+// Place all the styles related to the Requests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#request_section{
+  margin-left: 20px;
+  display: flex;
+}
+
+#action  a{
+  text-decoration: none;
+
+}
+#solicitud {
+  display: flex;
+  padding: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+#move_solicitud{
+  background-color: #393442;
+  border-width: 2px;
+  border-color: #3A3C4A;
+  border-style: solid;
+}
+#solicitud a {
+  color: #43B9BF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+#solicitud span{
+  font-size: 25px;
+  color: #43B9BF;
+}
+
+#titu{
+  background-color: #43BAC2;
+  color: white;
+  border-radius: 3px;
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  padding: 50px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  text-align: center;
+  margin-bottom: 17px;
+}
+
+#solicitudes{
+  width: 60%;
+  border-style: solid;
+  margin-left: 50px;
+  border-width: 1px;
+  border-color: #d4d4d4;
+  background-color: white;
+  padding: 50px;
+}
+#formulario{
+  color: white;
+  margin-left: 50px;
+}
+table thead tr th{
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+table tbody tr td {
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+}
+table tbody tr td a{
+  text-decoration: none;
+}
+#total{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  border-color: #d4d4d4;
+  border-width: 1px;
+  border-style: solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+#move_titu{
+  background-color: #393442;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+#solicitud a:hover{
+  background-color: #393442;
+}
+#move_solicitud:hover{
+  border-width: 8px;
+  border-color: #43B9Bf;
+  border-bottom: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  padding: 2px;
+}
+#actions_request{
+  background-color: #393442;
+}
+#actions_request ul li{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid grey;
+}
+#actions_request ul li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+.moveActions_Request{
+  display: flex;
+  margin-left: 20px;
+  color: grey;
+}
+#actionR{
+  width: 280px;
+}

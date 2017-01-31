@@ -1,0 +1,3 @@
+class Allaccepted < ApplicationRecord
+
+end

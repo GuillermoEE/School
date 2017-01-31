@@ -1,0 +1,45 @@
+<div class="groups_table ">
+
+  <!--<div class="title">-->
+  <!--   <h1>Grupos del ciclo escolar</h1> -->
+  <!-- </div> -->
+
+  <!-- Variable de referencia para JavaScript!-->
+  <div class="hide groupAll_grupos sombra" id="list_m">
+    <!-- Grupo matutino !-->
+    <div class="moveGroup_turn">
+      <div class="group_turn_groups">
+        <h2>Turno matutino</h2>
+      </div>
+    </div>
+    <!-- Iteramos a todos las alumnos solo del turno matutino !-->
+    <% k = 0 #Varible contador %>
+    <% @groups.each do |g| %>
+    <% k+=1 #Este contador nos ayudará como referencia en JavaScript %>
+      <% if g[0][:turn] == 'M' %>
+      <div class="group_select" id="select_group_<%= k %>">
+        <div class="groupType_groups"><%= @groupIdentifier[g[0][:group]] %></div> <div class="specia"><%= g[0][:speciality] %></div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="hide groupAll_grupos sombra" id="list_v">
+    <!-- Grupo matutino !-->
+    <div class="moveGroup_turn">
+      <div class="group_turn_groups">
+        <h2>Turno Vespertino</h2>
+      </div>
+    </div>
+    <!-- Iteramos a todos las alumnos solo del turno matutino !-->
+    <% k = 0 #Varible contador %>
+    <% @groups.each do |g| %>
+    <% k+=1 #Este contador nos ayudará como referencia en JavaScript %>
+      <% if g[0][:turn] == 'V' %>
+      <div class="group_select" id="select_group_<%= k %>">
+        <div class="groupType_groups"><%= @groupIdentifier[g[0][:group]] %></div> <div class="specia"><%= g[0][:speciality] %></div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
