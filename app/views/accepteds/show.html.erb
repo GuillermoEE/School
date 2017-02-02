@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @accepted.name %>
+</p>
+
+<p>
+  <strong>Apellidopaterno:</strong>
+  <%= @accepted.apellidoPaterno %>
+</p>
+
+<p>
+  <strong>Apellidomaterno:</strong>
+  <%= @accepted.apellidoMaterno %>
+</p>
+
+<p>
+  <strong>Exammark:</strong>
+  <%= @accepted.examMark %>
+</p>
+
+<p>
+  <strong>Schoolaverage:</strong>
+  <%= @accepted.schoolAverage %>
+</p>
+
+<p>
+  <strong>Speciality:</strong>
+  <%= @accepted.speciality %>
+</p>
+
+<p>
+  <strong>Secondspeciality:</strong>
+  <%= @accepted.secondSpeciality %>
+</p>
+
+<p>
+  <strong>Finalspeciality:</strong>
+  <%= @accepted.finalSpeciality %>
+</p>
+
+<p>
+  <strong>Turn:</strong>
+  <%= @accepted.turn %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @accepted.group %>
+</p>
+
+<%= link_to 'Edit', edit_accepted_path(@accepted) %> |
+<%= link_to 'Back', accepteds_path %>

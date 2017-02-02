@@ -1,0 +1,36 @@
+<%= render 'helpersLayout/header' %>
+
+<section class="acceptedSection">
+  <p id="notice"><%= notice %></p>
+  <div class="groupAc">
+    <div class="move_grupo">
+      <h1 class="grupoT">GRUPOS</h1>
+    </div>
+    <div class="actionsG">
+      <ul>
+        <li><p><%= link_to 'Agregar', new_accepted_path %></p></li>
+        <li><a href="/delateAll1">Vaciar bases de datos</a></li>
+        <li><a href="#">Revisar grupos</a>
+          <ul>
+            <li>
+              <p id="ver_matutino" class="caca">Turno Matutino</p>
+            </li>
+            <li>
+              <p id="ver_vespertino" class="caca">Turno Verpertino</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <%= form_tag(accepteds_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Buscar alumnos" %>
+  <%= submit_tag "Buscar", :name => nil %>
+  <% end %>
+  <div class="renders">
+    <% if Accepted.all.length > 0%>
+      <%= render 'helpersLayout/groupsFinderA' %>
+      <%= render 'helpersLayout/groupsLayoutA' %>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @speciality.name %>
+</p>
+
+<p>
+  <strong>Morningturn:</strong>
+  <%= @speciality.morningTurn %>
+</p>
+
+<p>
+  <strong>Eveningturn:</strong>
+  <%= @speciality.eveningTurn %>
+</p>
+
+<p>
+  <strong>Morningclasses:</strong>
+  <%= @speciality.morningClasses %>
+</p>
+
+<p>
+  <strong>Eveningclasses:</strong>
+  <%= @speciality.eveningClasses %>
+</p>
+
+<p>
+  <strong>Numberstudents:</strong>
+  <%= @speciality.numberStudents %>
+</p>
+
+<%= link_to 'Edit', edit_speciality_path(@speciality) %> |
+<%= link_to 'Back', specialities_path %>

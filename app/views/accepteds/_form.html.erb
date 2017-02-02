@@ -1,0 +1,72 @@
+<%= render 'helpersLayout/header' %>
+<section class="mainBox">
+
+
+  <%= form_for(accepted) do |f| %>
+    <% if accepted.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(accepted.errors.count, "error") %> prohibited this accepted from being saved:</h2>
+
+        <ul>
+        <% accepted.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :apellidoPaterno %>
+      <%= f.text_field :apellidoPaterno %>
+    </div>
+
+    <div class="field">
+      <%= f.label :apellidoMaterno %>
+      <%= f.text_field :apellidoMaterno %>
+    </div>
+
+    <div class="field">
+      <%= f.label :examMark %>
+      <%= f.text_field :examMark %>
+    </div>
+
+    <div class="field">
+      <%= f.label :schoolAverage %>
+      <%= f.text_field :schoolAverage %>
+    </div>
+
+    <div class="field">
+      <%= f.label :speciality %>
+      <%= f.text_field :speciality %>
+    </div>
+
+    <div class="field">
+      <%= f.label :secondSpeciality %>
+      <%= f.text_field :secondSpeciality %>
+    </div>
+
+    <div class="field">
+      <%= f.label :finalSpeciality %>
+      <%= f.text_field :finalSpeciality %>
+    </div>
+
+    <div class="field">
+      <%= f.label :turn %>
+      <%= f.text_field :turn %>
+    </div>
+
+    <div class="field">
+      <%= f.label :group %>
+      <%= f.text_field :group %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</section>

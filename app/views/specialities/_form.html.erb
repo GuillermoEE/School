@@ -1,0 +1,47 @@
+<%= form_for(speciality) do |f| %>
+  <% if speciality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(speciality.errors.count, "error") %> prohibited this speciality from being saved:</h2>
+
+      <ul>
+      <% speciality.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :morningTurn %>
+    <%= f.check_box :morningTurn %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eveningTurn %>
+    <%= f.check_box :eveningTurn %>
+  </div>
+
+  <div class="field">
+    <%= f.label :morningClasses %>
+    <%= f.text_field :morningClasses %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eveningClasses %>
+    <%= f.text_field :eveningClasses %>
+  </div>
+
+  <div class="field">
+    <%= f.label :numberStudents %>
+    <%= f.number_field :numberStudents %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
