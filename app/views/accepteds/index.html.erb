@@ -20,13 +20,16 @@
             </li>
           </ul>
         </li>
+        <li>
+          <%= form_tag(accepteds_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Buscar alumnos", id: "buscador" %>
+          <%= submit_tag "Buscar", :name => nil %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
-  <%= form_tag(accepteds_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Buscar alumnos" %>
-  <%= submit_tag "Buscar", :name => nil %>
-  <% end %>
+
   <div class="renders">
     <% if Accepted.all.length > 0%>
       <%= render 'helpersLayout/groupsFinderA' %>
