@@ -5,7 +5,11 @@ $(document).ready(function(){
 
 function loadScreen(){
   $('#loading').click(function(){
-    $('#request_section').hide();
+    $('section').hide();
+    $('#load').show();
+  });
+  $('#gen').click(function(){
+    $('section').hide();
     $('#load').show();
   });
 }

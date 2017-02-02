@@ -9,9 +9,9 @@ class AcceptedsController < ApplicationController
 
     #buscador en la zona de grupos
   if params[:search]
-    @groups = Accepted.search(params[:search]).order("created_at DESC")
+    @sgroups = Accepted.search(params[:search]).order("created_at DESC")
   else
-    @groups = Accepted.all.order('created_at DESC')
+    @sgroups = Accepted.all.order('created_at DESC')
   end
 
 
