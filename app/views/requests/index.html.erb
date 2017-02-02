@@ -20,22 +20,18 @@
     <div id="actions_request">
       <ul>
         <li><div class="moveActions_Request"><span class="icon-plus"></span> <p><%= link_to 'Nueva solicitud', new_request_path %></p></div></li>
-        <li><div class="moveActions_Request"><a href="/delateAll">eliminar</a></div></li>
-        <li class="buscador_request">
-          <%= form_tag(requests_path, :method => "get", id: "search-form") do %>
-             <%= text_field_tag :search, params[:search], placeholder: "" %>
-              <%= submit_tag "Buscar", :name => nil %>
-            <% end %>
-        </li>
-        <li>
-          <%= form_tag import_requests_path, multipart: true do %>
-              <%= file_field_tag :file%>
-              <%= submit_tag "Importar", :id =>"loading"%>
-          <% end %>
-        </li>
+
+        <li><div class="moveActions_Request", id="loading"><a href="/delateAll">eliminar</a></div></li>
       </ul>
     </div>
-
+  <%= form_tag import_requests_path, multipart: true do %>
+      <%= file_field_tag :file%>
+      <%= submit_tag "Importar", :id =>"loading"%>
+  <% end %>
+  <%= form_tag(requests_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Buscar alumnos" %>
+    <%= submit_tag "Buscar", :name => nil %>
+  <% end %>
 
 
   </div>
