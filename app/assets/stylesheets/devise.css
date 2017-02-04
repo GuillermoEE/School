@@ -149,7 +149,10 @@
 }
 /*Propiedades especificas del boton "Sig in" que se encuentran en el div container_login2*/
 .color_boton_signin{
-  padding: 1% 12.7%; /*Padding superior y derecho del boton "Sig in"*/
+  font-size: 16px;
+  width: 15%;
+  padding: 1.5% 10%;
+  font-size: 100%; /*Padding superior y derecho del boton "Sig in"*/
   background-color: rgb(56, 53, 71); /*Color del boton "Sig in"*/
   margin-top: 5%; /*Margen superior del boton "Login in"*/
 }
