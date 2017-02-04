@@ -1,0 +1,163 @@
+/*Propiedades Generales*/
+*{
+  margin: 0 auto;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.cambio_div_alum_rec{
+  border-radius: 0px;
+}
+/*Propiedades del la imagen de laptop que se encuentra en el div container_alum_recom*/
+.lap_alum_recom{
+  width: 70%; /*Tamaño de la imagen*/
+  margin-left: 14%;
+  margin-top: 25%; /*Margenes izquierdo y superior de la imagen*/
+}
+/*Propiedades del letrero de bienvenida que se encuentra en el div container_alum_recom */
+.welcome_alum_recom{
+  font-size: 200%;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center; /*Tamaño de letra, tipo de letra, color y alineacion del letrero de bienvenida*/
+  margin-left: 0%;
+  margin-top: 10%;
+  margin-bottom: 2px; /*Margenes izquierdo, superior e inferior del letrero de Bienvenida del div div container_alum_recom*/
+}
+
+/*Propiedades de la etiqueta "Clases Matutinas" que se encuentran en el div container_new_specialities2*/
+.acomodar_alum_recom{
+  margin-top: 7%; /*Margenes izquierdo y superior de la etiqueta "Clases Matutinas"*/
+}
+/*Propiedades del campo "Clases Matutinas" que se encuentran en el div container_new_specialities2*/
+.clases_matutinas_alum_recom{
+  width: 39%; /*Tamaño del campo "Clases Matutinas"*/
+  margin-left: 8%;
+  margin-top: 6%;  /*Margenes izquierdo y superior del campo "Clases Matutinas"*/
+}
+.especialidad{
+  display: block;
+}
+/*Propiedades de la etiqueta "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+.acomodar_alum_recom2{
+  margin-top: 2%; /*Margen superior de la etiqueta "Clases Vespertinas"*/
+}
+/*Propiedades del campo "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+.clases_vespertinas_alum_recom{
+  width: 39%; /*Tamaño del campo "Clases Vespertinas"*/
+  margin-left: 16%;
+  margin-top: 1%; /*Margenes izquierdo y superior del campo "Clases Vespertinas"*/
+}
+/*Propiedades de los botones "Crear Especialidad y Cancelar" que se encuentran en el div container_new_specialities2*/
+.btn-alum_recom{
+  float: left;/*Posicion de los botones "Crear Especialidad y Cancelar"*/
+  cursor: pointer; /*Accion del cursor de los botones "Crear Especialidad y Cancelar"*/
+  font-size: 110%;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255); /*Tamano de letra, tipo y color los botones"Crear Especialidad y Cancelar"*/
+  padding: 3% 3.5%; /*Padding superior y derecho del botones "Crear Especialidad y Cancelar"*/
+  border-radius: 14px; /*Bordes redondeados los botones¿ "Crear Especialidad y Cancelar"*/
+  border: none; /*Tipo de borde: ninguno, los botones "Crear Especialidad y Cancelar"*/
+  background-color: rgb(18, 161, 155); /*Color del boton "Crear Especialidad y Cancelar""*/
+  margin-left: 50%;
+  margin-top: 3%;
+}
+/*Propiedades del boton "Cancelar" que se encuentran en el div container_new_specialities2*/
+.acomodar_btn_alum_recom{
+  float: left; /*Posicion de los botones "Cancelar"*/
+  color: rgb(000, 000, 000); /*Color de letra de los botones "Cancelar"*/
+  background-color: rgb(218, 218, 218); /*Color del boton "Cancelar"*/
+  margin-left: 25%;
+  margin-top: -9%;/*Margenes izquierdo y superior de los botones "Cancelar"*/
+}
+
+
+/*Cambios que se realizan cuando la pantalla llega a las 1600px*/
+@media screen and (max-width: 1160px){
+  /*Cambios de la etiqueta "TM" que se encuentran en el div container_new_specialities2*/
+  .acomodar_tm_alum_recom{
+    margin-left: 8%; /*Margen izquierdode la etiqueta "TM"*/
+  }
+  /*Cambios de la etiqueta "TV" que se encuentran en el div container_new_specialities2*/
+  .acomodar_tv_alum_recom{
+    margin-left: 4%; /*Margen izquierdo de la etiqueta "TV"*/
+  }
+  .acomodar_alum_recom{
+    margin-left: 10%; /*Margenes izquierdo y superior de la etiqueta "Clases Matutinas"*/
+  }
+  /*Cambios del campo "Clases Matutinas" que se encuentran en el div container_new_specialities2*/
+  .clases_matutinas_alum_recom{
+      display: block;
+      width: 40%;
+  }
+  /*Cambios del campo "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+  .clases_vespertinas_alum_recom{
+    display: block;
+  }
+  /*Cambios de los botones "Crear Especialidad y Cancelar" que se encuentran en el div container_new_specialities2*/
+  .btn-alum_recom{
+    margin-left: 50%;
+    margin-top: 10%; /*Margenes izquierdo y superior de los botones "Crear Especialidad y Cancelar"*/
+  }
+  /*Cambios del boton "Cancelar" que se encuentran en el div container_new_specialities2*/
+  .acomodar_btn_alum_recom{
+    margin-left: 20%;
+    margin-top: -10%; /*Margenes izquierdo y superior del boton "Cancelar"*/
+  }
+}
+
+/*Cambios que se realizan cuando la pantalla llega a las 950px*/
+@media screen and (max-width: 950px){
+  /*Cambios del letrero de bienvenida que se encuentra en el div container_new_specialities */
+  .welcome_alum_recom{
+    font-size: 90%; /*Tamaño de letra del letrero de bienvenida*/
+    margin-top: 20%; /*Margen superior de letra del letrero de bienvenida*/
+  }
+  /*Cambios del la imagen de laptop que se encuentra en el div container_new_specialities*/
+  .lap_alum_recom{
+    margin-left: 14%;
+    margin-top: 40%;  /*Margenes izquierdo y superior de la imagen*/
+  }
+  /*Cambios del campo "Clases Matutinas" que se encuentran en el div container_new_specialities2*/
+  .clases_matutinas_alum_recom{
+    width: 70%; /*Tamaño del campo "Clases Matutinas"*/
+    margin-left: 26px;
+    margin-top: 11px; /*Margenes izquierdo y superior del campo "Clases Matutinas"*/
+  }
+  /*Cambios de la etiqueta "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+  .acomodar_alum_recom2{
+    width: 70%; /*Tamaño de la etiqueta "Clases Vespertinas"*/
+    margin-left: 26px;
+    margin-top: 1%; /*Margenes izquierdo y superior de la etiqueta "Clases Vespertinas"*/
+  }
+  /*Cambios del campo "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+  .clases_vespertinas_alum_recom{
+    margin-left: 26px;
+    margin-top: 2%; /*Margenes izquierdo y superior del campo "Clases Vespertinas"*/
+  }
+  /*Cambios del campo "Numero de Estudiantes" que se encuentran en el div container_new_specialities2*/
+  .numero_estudiantes_alum_recom{
+    margin-left: 26px;
+    margin-top: 2%; /*Margenes izquierdo y superior del campo "Numero de Estudiantes"*/
+  }
+  /*Cambios de los botones "Crear Especialidad y Cancelar" que se encuentran en el div container_new_specialities2*/
+  .btn-alum_recom{
+    display: block;
+    font-size: 13px;  /*Tamaño de letra de los botones "Crear Especialidad y Cancelar"*/
+    margin-left: 26px;
+    margin-top: 10%; /*Margenes izquierdo y superior de los botones "Crear Especialidad y Cancelar"*/
+  }
+  /*Cambios del boton "Cancelar" que se encuentran en el div container_new_specialities2*/
+  .acomodar_btn_alum_recom{
+    margin-top: 24%; /*Margen superior del boton "Cancelar"*/
+    margin-left: -35%;
+  }
+}
+
+/*Cambios que se realizan cuando la pantalla llega a las 500px*/
+@media screen and (max-width: 500px){
+  /*Cambios de los botones "Crear Especialidad y Cancelar" que se encuentran en el div container_new_specialities2*/
+  .btn-alum_recom{
+    color: rgb(000, 000, 000); /*Color de letra de los botones "Crear Especialidad y Cancelar"*/
+    background-color: rgb(218, 218, 218); /*Color de fondo de los botones "Crear Especialidad y Cancelar"*/
+  }
+}

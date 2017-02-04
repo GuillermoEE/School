@@ -1,0 +1,151 @@
+/*Propiedades Generales*/
+*{
+  margin: 0 auto;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+ /*Propiedades del div container_solicitud de la seccion Nueva Solicitud*/
+.container_solicitud{
+  float: left; /*Posicion del div container_solicitud */
+  width: 20%;
+  height: 570px; /*Tamaño del div container_solicitud */
+  margin-left: 2%; /*Margen izquierdo del div container_solicitud */
+}
+
+/*Propiedades del div container_solicitud2 de la seccion Nueva Solicitud*/
+.container_solicitud2{
+  float: left; /*Posicion del div container_solicitud2 */
+  width: 70%;
+  height: 570px; /*Tamaño del div container_solicitud2 */
+  background-color: #202020;  /*Color del div container_solicitud2 */
+  border-radius: 7px; /*Bordes redondeados del div container_solicitud2 */
+  margin-left: 2%; /*Margen izquierdo del div container_solicitud2 */
+}
+/*Propiedades del div solicitud y texto que contiene la informacion de la seccion*/
+.solicitud_y_textos{
+  float: left; /*Posicion del div solicitud y texto*/
+  width: 30%;
+  height: 500px; /*Tamaño del div solicitud y texto*/
+  margin-left: 3%;
+  margin-top: 3%; /*Margenes izquierdo y superior del div solicitud y texto*/
+}
+/*Propiedades del texto que se encuentra en el div solicitud y texto*/
+.solicitud_texto{
+  font-size: 80%;
+  line-height: 140%;
+  width: 100%;
+  text-align: left; /*Tamaño de letra, interlineado, tamaño del contenedor, tipo de letra, color y alineacion del texto*/
+  margin-left: 0%;
+  margin-top: 2%;
+  margin-bottom: 20%; /*Margenes izquierdo, superior e inferior del texto*/
+}
+/*Propiedades del texto que se encuentra en el div datos_solicitud*/
+.soli_datos{
+  margin-top: 7%; /*Margen superior del texto*/
+}
+/*Propiedades de div datos_solicitud del container_solicitud2*/
+.datos_solicitud{
+  width: 150px;
+  height: 150px; /*Tamaño de div datos_solicitud*/
+  border-radius: 15px; /*Redondear bordes de div datos_solicitud*/
+  background-color: rgb(255, 022, 022); /*Color de div datos_solicitud*/
+  margin-left: 25%;
+  margin-top: 10%; /*Margenes izquierdo y superior de div datos_solicitud*/
+}
+/*Propiedades de la imagen que se encuentra de div datos_solicitud*/
+.user_solicitud{
+  width: 60%; /*Tamaño de la imagen */
+  margin-left: 20%;
+  margin-top: 9%; /*Margenes izquierdo y superior de la imagen */
+}
+/*Propiedades del div que contiene el formulario de la seccion Nueva Solicitud*/
+.formulario_solicitud{
+  float: left; /*Posicion del div que contiene el formulario*/
+  width: 60%;
+  height: 500px; /*Tamaño del div que contiene el formulario*/
+  border-width: medium;
+  border-radius: 15px;
+  border-color: rgb(18, 161, 155);
+  border-style: solid; /*Tipo de borde, borde redondeado, color y estilo del div que contiene el formulario*/
+  margin-left: 3%;
+  margin-top: 3%; /*Margenes izquierdo y superior del div que contiene el formulario*/
+}
+/*Propiedades del apellido paterno y materno*/
+.mover_apellido_paterno{
+  float: left; /*Posicion del div que contiene el el apellido paterno y materno*/
+  width: 40%; /*Tamaño del div que contiene el el apellido paterno y materno*/
+  margin-bottom: 3%; /*Margen inferior del div que contiene el el apellido paterno y materno*/
+}
+/*Propiedades de la etiqueta apellido paterno*/
+.margen_apeliido{
+  margin-left: 10%; /*Margen izquierdo de la etiqueta apellido paterno*/
+}
+/*Propiedades de la etiqueta apellido materno*/
+.margen_apeliido2{
+  margin-left: 0%; /*Margen izquierdo de la etiqueta apellido materno*/
+}
+/*Propiedades del div que contiene el el apellido paterno y materno*/
+.contiene_apellidos{
+  width: 110%; /*Tamaño del div que contiene el el apellido paterno y materno*/
+}
+/*Propiedades que mueve las etiquetas y los campos*/
+.mover_solicitud_ele{
+  margin-left: 10%; /*Margen izquierdo de las etiquetas y los campos*/
+}
+/*Propiedades que mueve los campos*/
+.mover_ele{
+  margin-bottom: 2%; /*Margen inferior de los campos*/
+}
+/*Propiedades de las etiquetas que se encuentran en el div formulario*/
+.etiqueta_solicitud{
+  font-size: 90%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:bolder;
+  color:  rgb(18, 161, 155); /*Tamaño de letra, tipo, estilo y color de las etiquetas"*/
+  margin-top: 3%; /*Margenes superior de las etiquetas*/
+}
+/*Propiedades de las campos que se encuentran en el div formulario*/
+.form-input_solicitud{
+  height: 30px;
+  width: 70%; /*Tamaño de los campos*/
+  font-size: 17px;
+  font-family: "Open Sans";
+  color: #d4d4d4;/*Tamaño de letra, tipo y color de los campos*/
+  border-style: solid;
+  border-color:#d4d4d4; /*Tipo de borde y color de los campos*/
+  background-color:#202020; /*Color de los campos*/
+  padding-left: 9%;
+  margin-top: 2%; /*Padding izquierdo y margen superior de los campos*/
+}
+/*Propiedades del boton que se encuentran en el div formulario*/
+.mover_boton_solicitud{
+  margin-left: 75%;
+  margin-top: -7%; /*Margenes izquierdo y superior del boton*/
+}
+
+/*Cambios que se dan cuando la pantalla se reduce a 900px*/
+@media screen and (max-width: 900px){
+  /*Cambios de div datos_solicitud del container_solicitud2*/
+  .datos_solicitud{
+    width: 100px;
+    height: 100px; /*Tamaño de div datos_solicitud*/
+    margin-left: 25%; /*Margen superior de div datos_solicitud*/
+  }
+  /*Cambios del boton que se encuentran en el div formulario*/
+  .mover_boton_solicitud{
+    margin-top: 5%; /*Margen superior del boton*/
+  }
+}
+
+/*Cambios que se dan cuando la pantalla se reduce a 600px*/
+@media screen and (max-width: 600px){
+  /*Cambios del div solicitud y texto que contiene la informacion de la seccion*/
+  .solicitud_y_textos{
+    display: none; /*Display: none, hace desaparecer el div solicitud y texto que contiene la informacion de la seccion*/
+  }
+  /*Cambios del div que contiene el formulario de la seccion Nueva Solicitud*/
+  .formulario_solicitud{
+    width: 80%;  /*Tamaño del div que contiene el formulario*/
+    margin-left: 8%; /*Margen superior del div que contiene el formulario*/
+  }
+}

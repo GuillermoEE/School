@@ -1,0 +1,343 @@
+/*Propiedades Generales*/
+*{
+  margin: 0 auto;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+/*Propiedades del div principal*/
+.PrincipalNewSpecialities{
+  background-color: rgba(255,255,220); /*Color del degradado del div principal*/
+  height: 600px;
+  width: 100%; /*Tamaño del div principal*/
+}
+
+/*Propiedades del div que contiene el mensaje principal*/
+.container_new_specialities{
+  float: left; /*Posicion del div container_new_specialities*/
+  width: 33%;
+  height: 530px; /*Tamaño del div container_new_specialities*/
+  background-color: rgb(18, 161, 155);  /*Color del div container_new_specialities*/
+  border-radius: 20px 0px 0px 20px;  /* Borde del div container_new_specialities*/
+  margin-left: 9%;
+  margin-top: 0%;  /*Margenes izquierdo y superior del div container_new_specialities*/
+}
+/*Propiedades de la sombra que se utiliza en "Nueva Especialidad"*/
+.sombra_speciality{
+  -webkit-box-shadow: 2px 5px 10px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 8px 8px -1px rgba(0,0,0,0.75);
+  box-shadow: 2px 3px 8px -1px rgba(0,0,0,0.75);
+}
+/*Propiedades del letrero de bienvenida que se encuentra en el div container_new_specialities */
+.welcome_new_specialities{
+  font-size: 2.5em;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center; /*Tamaño de letra, tipo de letra, color y alineacion del letrero de bienvenida*/
+  margin-left: 0%;
+  margin-top: 10%;
+  margin-bottom: 2px; /*Margenes izquierdo, superior e inferior del letrero de Bienvenida del div container_new_specialities*/
+}
+/*Propiedades del texto que se encuentra en el div container_new_specialities*/
+.text_new_specialities{
+  font-size: 1em;
+  line-height: 140%;
+  width: 80%;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center; /*Tamaño de letra, interlineado, tamaño del contenedor, tipo de letra, color y alineacion del texto*/
+  margin-left: 10%;
+  margin-top: 0.5%;
+  margin-bottom: 20%; /*Margenes izquierdo, superior e inferior del texto que se encuentra en div container_new_specialities*/
+}
+/*Propiedades del la imagen de laptop que se encuentra en el div container_new_specialities*/
+.lap_new_specialities{
+  width: 70%;
+  margin-left: 14%; /*Tamaño de la imagen*/
+}
+
+/*Propiedades del div que contiene el formulario para agregar una Nueva Especialidad*/
+.container_new_specialities2{
+  float: left; /*Posicion del div container_new_specialities2*/
+  width: 48%;
+  height: 530px; /*Tamaño del div container_new_specialities2*/
+  background-color: rgb(255, 255, 255); /*Color del div container_new_specialities2*/
+  margin-top: 0%;
+  margin-right: 8%; /*Margenes izquierdo, superior y derecho del texto que se encuentra en div container_new_specialities2*/
+}
+/*Propiedades de las etiquetas que se encuentran en el div container_new_specialities2*/
+.speciality_texto{
+  float: left;
+  font-size: 110%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:bolder;
+  color: rgb(000, 000, 000); /*Tamaño de letra, tipo, estilo y color de las etiquetas"*/
+  margin-left: 10%;
+  margin-top: 9%; /*Margenes izquierdo y superior de las etiquetas*/
+}
+/*Propiedades de las campos especificamente de "Nombre" que se encuentran en el div container_new_specialities2*/
+.form-input_speciality{
+  float: left;
+  height: 30px;
+  width: 50%; /*Tamaño de los campos*/
+  font-size: 17px;
+  font-family: "Open Sans";
+  color: rgb(124, 124, 124); /*Tamaño de letra, tipo y color de los campos*/
+  border:none; /*Tipo de borde: ninguno, de los campos*/
+  border-radius: 8px;  /*Bordes redondeados de los campos*/
+  background-color: rgb(218, 218, 218); /*Color de los campos*/
+  padding-left: 9%;
+  margin-left: 12%;
+  margin-top: 8%;
+  margin-bottom: 5%; /*Padding izquierdo, margenes derecho, superior e inferior de los campos*/
+}
+/*Propiedades de la etiqueta "Turno" que se encuentran en el div container_new_specialities2*/
+.acomodar_etiqueta_speciality{
+  margin-top: 2%; /*Margen superior de la etiqueta "Turno"*/
+}
+/*Propiedades de la etiqueta "TM" que se encuentran en el div container_new_specialities2*/
+.acomodar_tm_speciality{
+  margin-left: 8%;
+  margin-top: 2%; /*Margenes derecho y superior de la etiqueta "TM"*/
+}
+/*Propiedades de los checkbox "TM y TV" que se encuentran en el div container_new_specialities2*/
+.caja_speciality{
+  float: left; /*Posicion de los caja "Checkbox"*/
+  height: 30px;
+  width: 20%;  /*Tamaño de los caja "Checkbox"*/
+  margin-left: -6%;
+  margin-top: 1%; /*Margenes izquierdo y superior de los caja "Checkbox"*/
+}
+/*Propiedades de los etiquetas "Turno Matutino" y "Turno Vespertina" que se encuentran en el div container_new_specialities2*/
+.remember_speciality{
+  float: left; /*Posicion de los textos "Turno Matutino" y "Turno Vespertina"*/
+  font-size: 90%;
+  font-family: "Open Sans";
+  color: rgb(56, 53, 71); /*Tamaño de letra, tipo y color de los textos "Turno Matutino" y "Turno Vespertina"*/
+  margin-left: -6%;
+  margin-top: 2%; /*Margenes izquierdo y superior de los textos "Turno Matutino" y "Turno Vespertina"*/
+}
+/*Propiedades de la etiqueta "TV" que se encuentran en el div container_new_specialities2*/
+.acomodar_tv_speciality{
+  margin-left: 6%;
+  margin-top: 2%;  /*Margenes derecho y superior de la etiqueta "TV"*/
+}
+/*Propiedades de la etiqueta "Clases Matutinas" que se encuentran en el div container_new_specialities2*/
+.acomodar_speciality{
+  margin-left: 9%;
+  margin-top: 5%; /*Margenes izquierdo y superior de la etiqueta "Clases Matutinas"*/
+}
+/*Propiedades del campo "Clases Matutinas" que se encuentran en el div container_new_specialities2*/
+.clases_matutinas_speciality{
+  width: 39%; /*Tamaño del campo "Clases Matutinas"*/
+  margin-left: 10%;
+  margin-top: 5%;  /*Margenes izquierdo y superior del campo "Clases Matutinas"*/
+}
+/*Propiedades de la etiqueta "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+.acomodar_speciality2{
+  margin-top: 0%; /*Margen superior de la etiqueta "Clases Vespertinas"*/
+}
+/*Propiedades del campo "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+.clases_vespertinas_speciality{
+  width: 39%; /*Tamaño del campo "Clases Vespertinas"*/
+  margin-left: 7.5%;
+  margin-top: -1%; /*Margenes izquierdo y superior del campo "Clases Vespertinas"*/
+}
+/*Propiedades del campo "Numero de Estudiantes" que se encuentran en el div container_new_specialities2*/
+.numero_estudiantes_speciality{
+  width: 31.2%; /*Tamaño del campo "Numero de Estudiantes"*/
+  margin-left: 8%;
+  margin-top: -1%; /*Margenes izquierdo y superior del campo "Numero de Estudiantes"*/
+}
+/*Propiedades de los botones "Crear Especialidad y Cancelar" que se encuentran en el div container_new_specialities2*/
+.btn-speciality{
+  display: block; /*Posicion de los botones "Crear Especialidad y Cancelar"*/
+  cursor: pointer; /*Accion del cursor de los botones "Crear Especialidad y Cancelar"*/
+  font-size: 110%;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255); /*Tamano de letra, tipo y color los botones"Crear Especialidad y Cancelar"*/
+  padding: 3% 3.5%; /*Padding superior y derecho del botones "Crear Especialidad y Cancelar"*/
+  border-radius: 14px; /*Bordes redondeados los botones¿ "Crear Especialidad y Cancelar"*/
+  border: none; /*Tipo de borde: ninguno, los botones "Crear Especialidad y Cancelar"*/
+  background-color: rgb(18, 161, 155); /*Color del boton "Crear Especialidad y Cancelar""*/
+  margin-left: 50%;
+  margin-top:10%;
+  margin-bottom: 5%; /*Margenes izquierdo, superior e inferior de los botones "Crear Especialidad y Cancelar"*/
+}
+/*Propiedades del boton "Cancelar" que se encuentran en el div container_new_specialities2*/
+.acomodar_btn_speciality{
+  float: left; /*Posicion de los botones "Cancelar"*/
+  color: rgb(000, 000, 000); /*Color de letra de los botones "Cancelar"*/
+  background-color: rgb(218, 218, 218); /*Color del boton "Cancelar"*/
+  margin-left: 25%;
+  margin-top: -14%;/*Margenes izquierdo y superior de los botones "Cancelar"*/
+}
+/*Propiedades del boton "Back <" que se encuentran en el div container_new_specialities2*/
+.back_link_edit_speciality{
+  float: left; /*Posicion del boton "Back <"*/
+  font-size: 200%;
+  font-family: "Open Sans";
+  text-align: center;
+  color: rgb(255, 255, 255); /*Tamaño de letra, tipo, alineación y color del boton "Back <"*/
+  cursor: pointer; /*Accion del cursor del boton "Back <"*/
+  background-color: rgb(000, 000, 000); /*Color del boton "Back <"*/
+  border-radius: 50%; /*Bordes redondeados del boton "Back <"*/
+  padding: 1% 1.4%;
+  margin-left: 82%;
+  margin-top: -11.5%; /*Padding superior e izquierdo, margenes izquierdo y superior del boton "Back <"*/
+}
+
+/*Cambios que se realizan cuando la pantalla llega a las 1600px*/
+@media screen and (max-width: 1160px){
+  /*Cambios de las etiquetas que se encuentran en el div container_new_specialities2*/
+  .speciality_texto{
+    font-size: 90%; /*Tamaño de las etiquetas*/
+    margin-left: 7%; /*Margen izquierdo de las etiquetas*/
+  }
+  /*Cambios de la etiqueta "TM" que se encuentran en el div container_new_specialities2*/
+  .acomodar_tm_speciality{
+    margin-left: 8%; /*Margen izquierdode la etiqueta "TM"*/
+  }
+  /*Cambios de los checkbox "TM y TV" que se encuentran en el div container_new_specialities2*/
+  .caja_speciality{
+    float: left; /*Posicion de las caja "Checkbox"*/
+    height: 20px; /*Tamaño de las caja "Checkbox"*/
+    margin-top: 2%; /*Margen superior de las caja "Checkbox"*/
+  }
+  /*Cambios de los etiquetas "Turno Matutino" y "Turno Vespertina" que se encuentran en el div container_new_specialities2*/
+  .remember_speciality{
+    float: left; /*Posicion de los textos "Turno Matutino" y "Turno Vespertina"*/
+    font-size: 80%; /*Tamaño de los textos "Turno Matutino" y "Turno Vespertina"*/
+    margin-top: 2.5%; /*Margen superior de los textos "Turno Matutino" y "Turno Vespertina"*/
+  }
+  /*Cambios de la etiqueta "TV" que se encuentran en el div container_new_specialities2*/
+  .acomodar_tv_speciality{
+    margin-left: 4%; /*Margen izquierdo de la etiqueta "TV"*/
+  }
+  /*Cambios del campo "Clases Matutinas" que se encuentran en el div container_new_specialities2*/
+  .clases_matutinas_speciality{
+    margin-left: 7%;
+    margin-top: 5%; /*Margenes izquierdo y superior del campo "Clases Matutinas"*/
+  }
+  /*Cambios del campo "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+  .clases_vespertinas_speciality{
+    margin-left: 5%;
+    margin-top: -1%; /*Margenes izquierdo y superior del campo "Clases Vespertinas"*/
+  }
+  /*Cambios del campo "Numero de Estudiantes" que se encuentran en el div container_new_specialities2*/
+  .numero_estudiantes_speciality{
+    margin-left: 5%;
+    margin-top: -1%; /*Margenes izquierdo y superior del campo "Numero de Estudiantes"*/
+  }
+  /*Cambios de los botones "Crear Especialidad y Cancelar" que se encuentran en el div container_new_specialities2*/
+  .btn-speciality{
+    margin-left: 50%;
+    margin-top: 32%; /*Margenes izquierdo y superior de los botones "Crear Especialidad y Cancelar"*/
+  }
+  /*Cambios del boton "Cancelar" que se encuentran en el div container_new_specialities2*/
+  .acomodar_btn_speciality{
+    margin-left: 20%;
+    margin-top: -15%; /*Margenes izquierdo y superior del boton "Cancelar"*/
+  }
+  /*Cambios del boton "Back <" que se encuentran en el div container_new_specialities2*/
+  .back_link_edit_speciality{
+    padding: .8% 1.4%;
+    margin-top: -13%; /*Padding superior e izquierdo, margen superior del boton "Back <"*/
+  }
+}
+
+/*Cambios que se realizan cuando la pantalla llega a las 950px*/
+@media screen and (max-width: 950px){
+  /*Cambios del letrero de bienvenida que se encuentra en el div container_new_specialities */
+  .welcome_new_specialities{
+    font-size: 150%; /*Tamaño de letra del letrero de bienvenida*/
+    margin-top: 20%; /*Margen superior de letra del letrero de bienvenida*/
+  }
+  /*Cambios del texto que se encuentra en el div container_new_specialities*/
+  .text_new_specialities{
+    font-size: 80%; /*Tamaño del texto*/
+    margin-top: 8%; /*Margen superior del texto*/
+  }
+  /*Cambios del la imagen de laptop que se encuentra en el div container_new_specialities*/
+  .lap_new_specialities{
+    margin-left: 14%;
+    margin-top: 40%;  /*Margenes izquierdo y superior de la imagen*/
+  }
+  /*Cambios de las etiquetas que se encuentran en el div container_new_specialities2*/
+  .speciality_texto{
+    font-size: 100%; /*Tamaño del texto de las etiquetas*/
+  }
+  /*Cambios de las campos especificamente de "Nombre" que se encuentran en el div container_new_specialities2*/
+  .form-input_speciality{
+    width: 70%; /*Tamaño de los campos"*/
+    font-size: 80%; /*Tamaño de letra de los campos"*/
+    margin-left: -65px;
+    margin-top: 60px; /*Margeness izquierdo y superior de los campos"*/
+  }
+  /*Cambios de los checkbox "TM y TV" que se encuentran en el div container_new_specialities2*/
+  .caja_speciality{
+    height: 16px; /*Tamaño de los checkbox "TM y TV"*/
+    margin-top: 2%; /*Margen superior de los checkbox "TM y TV"*/
+  }
+  /*Cambios de los etiquetas "Turno Matutino" y "Turno Vespertina" que se encuentran en el div container_new_specialities2*/
+  .remember_speciality{
+    display: none; /*Posicion de los etiquetas "Turno Matutino" y "Turno Vespertina": los hace desaparecer*/
+  }
+  /*Cambios del campo "Clases Matutinas" que se encuentran en el div container_new_specialities2*/
+  .clases_matutinas_speciality{
+    width: 70%; /*Tamaño del campo "Clases Matutinas"*/
+    margin-left: 26px;
+    margin-top: 11px; /*Margenes izquierdo y superior del campo "Clases Matutinas"*/
+  }
+  /*Cambios de la etiqueta "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+  .acomodar_speciality2{
+    width: 70%; /*Tamaño de la etiqueta "Clases Vespertinas"*/
+    margin-left: 26px;
+    margin-top: 1%; /*Margenes izquierdo y superior de la etiqueta "Clases Vespertinas"*/
+  }
+  /*Cambios del campo "Clases Vespertinas" que se encuentran en el div container_new_specialities2*/
+  .clases_vespertinas_speciality{
+    margin-left: 26px;
+    margin-top: 2%; /*Margenes izquierdo y superior del campo "Clases Vespertinas"*/
+  }
+  /*Cambios del campo "Numero de Estudiantes" que se encuentran en el div container_new_specialities2*/
+  .numero_estudiantes_speciality{
+    margin-left: 26px;
+    margin-top: 2%; /*Margenes izquierdo y superior del campo "Numero de Estudiantes"*/
+  }
+  /*Cambios de los botones "Crear Especialidad y Cancelar" que se encuentran en el div container_new_specialities2*/
+  .btn-speciality{
+    font-size: 13px;  /*Tamaño de letra de los botones "Crear Especialidad y Cancelar"*/
+    margin-left: 26px;
+    margin-top: 50%; /*Margenes izquierdo y superior de los botones "Crear Especialidad y Cancelar"*/
+  }
+  /*Cambios del boton "Cancelar" que se encuentran en el div container_new_specialities2*/
+  .acomodar_btn_speciality{
+    margin-top: -2%; /*Margen superior del boton "Cancelar"*/
+  }
+  /*Cambios del boton "Back <" que se encuentran en el div container_new_specialities2*/
+  .back_link_edit_speciality{
+    padding: 8px 14px;
+    margin-left: 75%;
+    margin-top: -126px; /*Padding superior e izquierdo, margenes izquierdo y superior del boton "Back <"*/
+  }
+}
+
+/*Cambios que se realizan cuando la pantalla llega a las 500px*/
+@media screen and (max-width: 500px){
+  /*Cambios del div que contiene el mensaje principal*/
+  .container_new_specialities{
+    display: none; /*Posicion de los div container_new_specialities": los hace desaparecer*/
+  }
+  /*Cambios del div que contiene el formulario para agregar una Nueva Especialidad*/
+  .container_new_specialities2{
+    float: left; /*Posicion del div*/
+    width: 100%; /*Tamaño del div*/
+    background-color: rgb(18, 161, 155); /*Color de fondo del div*/
+    height: 90%; /*Tamaño del div container_login2*/
+  }
+  /*Cambios de los botones "Crear Especialidad y Cancelar" que se encuentran en el div container_new_specialities2*/
+  .btn-speciality{
+    color: rgb(000, 000, 000); /*Color de letra de los botones "Crear Especialidad y Cancelar"*/
+    background-color: rgb(218, 218, 218); /*Color de fondo de los botones "Crear Especialidad y Cancelar"*/
+  }
+}

@@ -1,0 +1,349 @@
+/*Propiedades Generales*/
+*{
+  margin: 0 auto;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+
+/*Propiedades del div principal*/
+.PrincipalLogin{
+  background-color: background: rgba(34,33,65,1);
+  background: -moz-linear-gradient(left, rgba(34,33,65,1) 0%, rgba(186,23,67,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(34,33,65,1)), color-stop(100%, rgba(186,23,67,1)));
+  background: -webkit-linear-gradient(left, rgba(34,33,65,1) 0%, rgba(186,23,67,1) 100%);
+  background: -o-linear-gradient(left, rgba(34,33,65,1) 0%, rgba(186,23,67,1) 100%);
+  background: -ms-linear-gradient(left, rgba(34,33,65,1) 0%, rgba(186,23,67,1) 100%);
+  background: linear-gradient(to right, rgba(34,33,65,1) 0%, rgba(186,23,67,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222141', endColorstr='#ba1743', GradientType=1 ); /*Propiedades del degradado del div principal*/
+  height: 760px;
+  width: 100%; /*Tamaño del div principal*/
+}
+/*Propiedades del div que contiene la bienvenida*/
+.container_login{
+  float: left; /*Posicion del div container_login*/
+  width: 50%;
+  height: 650px; /*Tamaño del div container_login*/
+  background-color: rgb(18, 161, 155);  /*Color del div container_login*/
+  border-radius: 20px;  /* Borde del div container_login*/
+  margin-left: 9%;
+  margin-top: 3%;  /*Margenes izquierdo y superior del div container_login*/
+}
+/*Propiedades del letrero de bienvenida que se encuentra en el div container_login*/
+.welcome_login{
+  font-size: 3em;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center; /*Tamaño de letra, tipo de letra, color y alineacion del letrero de bienvenida*/
+  margin-left: -5%;
+  margin-top: 10%;
+  margin-bottom: 15px; /*Margenes izquierdo, superior e inferior del letrero de Bienvenida del div container_login*/
+}
+/*Propiedades del logo que se encuentra en el div container_login*/
+.logo_login{
+  width: 50%; /*Tamaño del logo*/
+  margin-left: 23%;
+  margin-top: 1%; /*Margenes izquierdo, superior del logo que se enuentra en el div container_login*/
+}
+/*Propiedades del texto que se encuentra en el div container_login*/
+.text_login{
+  font-size: 1.2em;
+  line-height: 140%;
+  width: 50%;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center; /*Tamaño de letra, interlineado, tamaño del contenedor, tipo de letra, color y alineacion del texto*/
+  margin-left: 23%;
+  margin-top: 2%;
+  margin-bottom: 7%; /*Margenes izquierdo, superior e inferior del texto que se encuentra en div container_login*/
+}
+/*Propiedades del la imagen de laptop que se encuentra en el div container_login*/
+.lap_login{
+  width: 60%;
+  margin-left: 18%; /*Tamaño de la imagen*/
+}
+
+/*Propiedades del div que contiene el formulario de Inicio de Sesión*/
+.container_login2{
+  float: left; /*Posicion del div container_login2*/
+  width: 35%;
+  height: 650px; /*Tamaño del div container_login2*/
+  background-color: rgb(255, 255, 255); /*Color del div container_login2*/
+  margin-left: -2%;
+  margin-top: 3%;
+  margin-right: 8%; /*Margenes izquierdo, superior y derecho del texto que se encuentra en div container_login2*/
+}
+/*Propiedades de las etiquetas de "Email" y "Password" que se encuentran en el div container_login2*/
+.login_texto{
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: rgb(18, 161, 155); /*Tamaño de letra, tipo, estilo y color de las etiquetas de "Email" y "Password"*/
+  margin-left: 50px;
+  margin-top: 20%; /*Margenes izquierdo y superior de las etiquetas de "Email" y "Password"*/
+}
+/*Propiedad de las etiquetas "Password" que se encuentran en el div container_login2*/
+.mover_password_login{
+  margin-top: 30px; /*Margen superior de las etiqueta "Password"*/
+}
+/*Propiedad de los campos de "Email" y "Password" que se encuentran en el div container_login2*/
+.form-input_login{
+  height: 40px;
+  width: 72%; /*Tamaño de los campos de "Email" y "Password"*/
+  font-size: 17px;
+  font-family: "Open Sans";
+  color: rgb(124, 124, 124); /*Tamaño de letra, tipo y color de los campos de "Email" y "Password"*/
+  border:none; /*Tipo de borde: ninguno, de los campos de "Email" y "Password"*/
+  border-radius: 10px;  /*Bordes redondeados de los campos de "Email" y "Password"*/
+  background-color: rgb(218, 218, 218); /*Color de los campos de "Email" y "Password"*/
+  padding-left: 8%;
+  margin-left: 50px;
+  margin-bottom: 5%; /*Padding izquierdo, margenes derecho e inferior de los campos "Email" y "Password"*/
+}
+/*Propiedad de los iconos que se encuentran en los campos de "Email" y "Password" que se encuentran en el div container_login2*/
+.form-input_login::before{
+  content: "\f007"; /*Icono que se encuentran en los campo de "Email"*/
+  position: absolute; /*Posicion del icono que se encuentran en los campo de "Email"*/
+  font-size: 20px;
+  font-family: 'FontAwesome';
+  color: rgb(124, 124, 124); /*Tamaño, fuente y color del icono que se encuentran en los campo de "Email"*/
+  padding-left: 7px;
+  padding-top: 3%; /*Padding izquierdo y superior del icono que se encuentran en los campo de "Email"*/
+}
+.form-input_login:last-child::before{
+  content: "\f023"; /*Icono que se encuentran en los campo de "Password*/
+}
+/*Propiedad de los caja "Checkbox" que se encuentran en el div container_login2*/
+.caja_login{
+  float: left; /*Posicion de los caja "Checkbox"*/
+  height: 20px;
+  width: 20%;  /*Tamaño de los caja "Checkbox"*/
+  margin-left: 50px;  /*Margen izquierdo de los caja "Checkbox"*/
+}
+/*Propiedad de los los textos "Recordar y ¿Olvidaste tu contraseña?" que se encuentran en el div container_login2*/
+.remember_login{
+  float: left; /*Posicion de los textos "Recordar y ¿Olvidaste tu contraseña?"*/
+  font-size: 15px;
+  font-family: "Open Sans";
+  color: rgb(56, 53, 71); /*Tamaño de letra, tipo y color de los textos "Recordar y ¿Olvidaste tu contraseña?"*/
+  margin-left: -5%;
+  margin-top: 0.5%; /*Margenes izquierdo y superior de los textos "Recordar y ¿Olvidaste tu contraseña?"*/
+}
+/*Propiedad de los los textos "¿Olvidaste tu contraseña?" que se encuentran en el div container_login2*/
+.mover_pregunta_login{
+  margin-left: 18%; /*Margen izquierdo del texto ¿Olvidaste tu contraseña?"*/
+}
+/*Propiedad de los botones "Login in y Sig in" que se encuentran en el div container_login2*/
+.btn-login{
+  display: block; /*Posicion de los botones "Login in y Sig in"*/
+  cursor: pointer; /*Accion del cursor de los botones "Login in y Sig in"*/
+  font-size: 17px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255); /*Tamano de letra, tipo y color los botones "Login in y Sig in"*/
+  padding: 1% 12%; /*Padding superior y derecho del boton "Login in"*/
+  border-radius: 15px; /*Bordes redondeados los botones "Login in y Sig in"*/
+  border: none; /*Tipo de borde: ninguno, los botones "Login in y Sig in"*/
+  background-color: rgb(18, 161, 155); /*Color del boton "Login in"*/
+  margin-left: 18%;
+  margin-top:10%;
+  margin-bottom: 5%; /*Margenes izquierdo, superior e inferior de los botones "Login in y Sig in"*/
+}
+/*Propiedades especificas del boton "Sig in" que se encuentran en el div container_login2*/
+.color_boton_signin{
+  padding: 1% 12.7%; /*Padding superior y derecho del boton "Sig in"*/
+  background-color: rgb(56, 53, 71); /*Color del boton "Sig in"*/
+  margin-top: 5%; /*Margen superior del boton "Login in"*/
+}
+
+/*Propiedades para la sección de "Recuperar contraseña"*/
+/*Propiedades para el link "log in" que se encuentra en devise/shared/_links.html*/
+.log_in_mover{
+  margin-left: 82%;
+  margin-top: 25%; /*Margenes izquierdo y superior para el link "log in"*/
+}
+/*Propiedades para el link "Sig in" que se encuentra en devise/shared/_links.html*/
+.sig_in_mover{
+  margin-left: 80%;
+  margin-top: 5%; /*Margenes izquierdo y superior para el link "Sig in"*/
+}
+/*Propiedades para el boton "Instrucciones" que se encuentra en el div container_login2 de la seccion Recueperar Constraseña*/
+.mover_intrucciones_login{
+  margin-left: 27%; /*Margen izquierdo para el boton "Instrucciones"*/
+}
+/*Propiedades para Logo que se encuentra en el div container_login de la seccion Recueperar Constraseña*/
+.mover_logo_login{
+  margin-top: 15%; /*Margen superior para el Logo*/
+}
+
+/*Propiedades para la sección de "Registrarse"*/
+/*Propiedades para mover la etiqueta "Email" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+.mover_sign_up{
+  margin-top: 10%; /*Margen superior de la etiqueta "Email"*/
+}
+/*Propiedades para mover la etiqueta "Password" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+.mover_sign_up_password{
+  margin-top: 5%; /*Margen superior de la etiqueta "Password"*/
+}
+/*Propiedades para mover boton "Sign Up" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+.mover_boton_sign_up{
+  margin-left: 32%; /*Margen izquierdo de la etiqueta "Password"*/
+}
+/*Propiedades para mover link "Log ip" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+.mover_sign_up_sec_registro{
+  margin-top: 5%; /*Margen superior del link "log in"*/
+}
+/*Propiedades para la etiqueta "caracter minimos" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+.caracter_minimo_sign_up{
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(56, 53, 71); /*Tamaño de letra, fuente, color para la etiqueta "caracter minimos"*/
+  margin-left: 50px;
+  margin-top: 20%; /*Margenes izquierdo y superior para la etiqueta "caracter minimos"*/
+}
+
+/*Propiedades para el link "Reenvuar" que se encuentra en devise/shared/_links.html*/
+.reenviar_login_mover{
+  margin-left: 10%; /*Margen izquierdo para el link "Reenviar"*/
+}
+/*Diseño resposive para el login caundo se reduce a 900px*/
+@media screen and (max-width: 900px){
+  /*Cambios del div principal*/
+  .PrincipalLogin{
+    width: 100%;
+    max-height: 600px; /*Tamaño del div principal*/
+  }
+  /*Cambios del div container_login*/
+  .container_login{
+    height: 80%;
+    min-height: 500px; /*Tamaño del div container_login*/
+  }
+  /*Cambios del letrero Bienvenido que se encuentra en el div container_login*/
+  .welcome_login{
+    font-size: 80%; /*Tamaño del letrero Bienvenido*/
+  }
+  /*Cambios del texto que se encuentra en el div container_login*/
+  .text_login{
+    font-size: 80%; /*Tamaño del texto*/
+  }
+
+  /*Cambios del div container_login2*/
+  .container_login2{
+    height: 80%;
+    min-height: 500px; /*Tamaño del div container_login2*/
+    margin-left: -3%; /*Margen izquierdo del div container_login2*/
+  }
+  /*Cambios de las etiquetas "Email" y "Password" que se encuentran en el div container_login2*/
+  .login_texto{
+    font-size: 15px; /*Tamaño de letra de las etiquetas "Email" y "Password"*/
+    margin-left: 10%;
+    margin-top: 40%; /*Margenes izquierdo y superior de las etiquetas de "Email" y "Password"*/
+  }
+  /*Cambios de las etiqueta "Password" que se encuentran en el div container_login2*/
+  .mover_password_login{
+    margin-top: 10%; /*Margen superior de la etiqueta "Password"*/
+  }
+  /*Cambios de los campos "Email" y "Password" que se encuentran en el div container_login2*/
+  .form-input_login{
+    height: 30px;
+    width: 60%; /*Tamaño de los campos de "Email" y "Password"*/
+    font-size: 80%; /*Tamaño de letra los campos de "Email" y "Password"*/
+    margin-left: 10%; /*Margen derecho de los campos "Email" y "Password"*/
+  }
+  /*Cambios de lo caja "Checbox" que se encuentran en el div container_login2*/
+  .caja_login{
+    margin-top: 2%; /*Margen superior de lo caja "Checbox"*/
+  }
+  /*Cambios de los textos "Recordar y ¿olvidaste contraseña?" que se encuentran en el div container_login2*/
+  .remember_login{
+    font-size: 80%; /*Tamaño de letra de los textos "Recordar y ¿Olvidaste tu contraseña?"*/
+    margin-top: 2%; /*Margen izquierdo de los textos "Recordar y ¿Olvidaste tu contraseña?"*/
+  }
+  /*Cambios de los botonos "Login in y Sig in" que se encuentran en el div container_login2*/
+  .btn-login{
+    font-size: 80%; /*Tamaño de letra de los botonos "Login in y Sig in"*/
+    margin-top: 50px; /*Margen superior de los botonos "Login in y Sig in"*/
+  }
+  /*Cambios del boton "Sig in" que se encuentran en el div container_login2*/
+  .color_boton_signin{
+    padding: 1% 14%; /*Padding superior y derecho del boton "Sig in"*/
+  }
+
+  /*Cambios para la sección de "Recuperar contraseña"*/
+  /*Cambios para el link "log in" que se encuentra en devise/shared/_links.html*/
+  .log_in_mover{
+    margin-left: 70%;
+    margin-top: 30%; /*Margenes izquierdo y superior para el link "log in"*/
+  }
+  /*Propiedades para el link "Sig in" que se encuentra en devise/shared/_links.html*/
+  .sig_in_mover{
+    margin-left: 66%;
+    margin-top: 5%; /*Margenes izquierdo y superior para el link "Sig in"*/
+  }
+  /*Propiedades para el boton "Instrucciones" que se encuentra en el div container_login2 de la seccion Recueperar Constraseña*/
+  .mover_intrucciones_login{
+    margin-left: 20%; /*Margen izquierdo para el boton "Instrucciones"*/
+  }
+  /*Propiedades para Logo que se encuentra en el div container_login de la seccion Recueperar Constraseña*/
+  .mover_logo_login{
+    margin-top: 30%; /*Margen superior para el Logo*/
+  }
+
+  /*Propiedades para la sección de "Registrarse"*/
+  /*Propiedades para mover la etiqueta "Email" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+  .mover_sign_up{
+    margin-top: 5%; /*Margen superior de la etiqueta "Email"*/
+  }
+  /*Propiedades para mover la etiqueta "Password" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+  .mover_sign_up_password{
+    margin-top: 5%; /*Margen superior de la etiqueta "Password"*/
+  }
+  /*Propiedades para mover boton "Sign Up" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+  .mover_boton_sign_up{
+    margin-left: 25%; /*Margen izquierdo de la etiqueta "Password"*/
+  }
+  /*Propiedades para mover link "Log ip" que se encuentra en el div container_login2 de la seccion "Registarse"*/
+  .mover_sign_up_sec_registro{
+    margin-top: 5%; /*Margen superior del link "log in"*/
+  }
+}
+
+/*Diseño resposive para el login caundo se reduce a 500px*/
+@media screen and (max-width: 550px){
+  /*Cambios del div principal*/
+  .PrincipalLogin{
+    width: 100%;
+    height: 100%;
+    min-height: 720px; /*Tamaño del div principal*/
+  }
+  /*Cambios del div container_login*/
+  .container_login{
+    display: none; /*Posicion del div, esta posicion hace que el div desaparezca*/
+  }
+
+  /*Cambios del div container_login2*/
+  .container_login2{
+    width: 100%;
+    min-height: 700px; /*Tamaño del div container_login2*/
+    background-color: rgb(18, 161, 155);  /*Color del div container_login*/
+    margin: 10px; /*Margenes del div container_login2*/
+  }
+  /*Cambios de las etiquetas "Email" y "Password" que se encuentran en el div container_login2*/
+  .login_texto{
+    color: rgb(255, 255, 255); /*Color de las etiquetas "Email" y "Password"*/
+  }
+  /*Cambios de los botones "Login in" y "Sig in" que se encuentran en el div container_login2*/
+  .btn-login{
+    background-color: rgb(56, 53, 71); /*Color de los botones "Login in" y "Sig in""*/
+    margin-top: 17%; /*Margen superior de los botones "Login in" y "Sig in"*/
+  }
+  /*Cambios del boton "Sig in" que se encuentran en el div container_login2*/
+  .color_boton_signin{
+    padding: 1% 13%; /*Padding superior y derecho del boton "Sig in"*/
+    margin-top: 7%; /*Margen superior del boton "Sig in"*/
+  }
+
+  /*Cambios para la sección de "Recuperar contraseña"*/
+  /*Propiedades para el boton "Instrucciones" que se encuentra en el div container_login2 de la seccion Recueperar Constraseña*/
+  .mover_intrucciones_login{
+    margin-left: 25%; /*Margen izquierdo para el boton "Instrucciones"*/
+  }
+}

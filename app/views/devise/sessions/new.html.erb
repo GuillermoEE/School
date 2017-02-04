@@ -1,0 +1,45 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<section class="PrincipalLogin">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="container_login">
+    <p class="welcome_login">Bienvenido a</p>
+    <%= image_tag("logo.png", class: "logo_login")%>
+    <p class="text_login">Estas en el sitio web para las admsiones del CBTis226</p>
+    <%= image_tag("lap.png", class: "lap_login")%>
+  </div>
+
+  <div class="container_login2">
+    <form>
+
+      <div>
+        <%= f.label :email, "EMAIL", class: "login_texto" %><br />
+        <%= f.email_field :email, autofocus:true,  placeholder: "Escribe tu email", class:"form-input_login" %>
+      </div>
+
+      <div>
+        <%= f.label :password, "PASSWORD", class: "login_texto mover_password_login"%><br />
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Escribe tu contraseña", class:"form-input_login"%>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div>
+          <%= f.check_box :remember_me, class:"caja_login" %>
+          <%= f.label :remember_me, "Recordarme", class: "remember_login"%>
+        </div>
+      <% end -%>
+
+      <div>
+        <%= f.submit "LOG IN", class:"btn-login"%>
+        <%= f.submit "SIG IN", class:"btn-login color_boton_signin"%>
+      </div>
+
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'%>
+        <%= link_to "¿Olvidaste tu contraseña?", new_password_path(resource_name), class: "remember_login mover_pregunta_login"%><br />
+      <% end -%>
+    <% end %>
+    </form>
+  </div>
+</section>
