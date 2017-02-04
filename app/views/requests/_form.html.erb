@@ -75,15 +75,17 @@
           <%= f.text_field :schoolAverage, class:"form-input_solicitud mover_solicitud_ele mover_ele" %>
         </div>
 
-        <div>
-          <%= f.label :speciality, "ESPECIALIDAD", class: "etiqueta_solicitud mover_solicitud_ele" %>
-          <%= f.select(:speciality, options_for_select(@specialities), {}, {class:"form-input_solicitud mover_solicitud_ele mover_ele"})%>
-        </div>
+        <div class="contiene_apellidos">
+          <div class="mover_apellido_paterno margen_apeliido mover_esp">
+            <%= f.label :speciality, "ESPECIALIDAD", class: "etiqueta_solicitud mover_solicitud_ele" %>
+            <%= f.select(:speciality, options_for_select(@specialities), {}, {class:"form-input_solicitud mover_solicitud_ele mover_ele"})%>
+          </div>
 
+          <div class="mover_apellido_paterno margen_apeliido2 mover_esp2">
+            <%= f.label :secondSpeciality, "SEGUNDA ESPECIALIDAD", class: "etiqueta_solicitud mover_solicitud_ele mover_solicitud_ele mover_ele" %>
+            <%= f.select(:secondSpeciality, options_for_select(@specialities), {}, {:class => "form-input_solicitud mover_solicitud_ele mover_ele"})%>
+          </div>
         <div>
-          <%= f.label :secondSpeciality, "SEGUNDA ESPECIALIDAD", class: "etiqueta_solicitud mover_solicitud_ele mover_solicitud_ele mover_ele" %>
-          <%= f.select(:secondSpeciality, options_for_select(@specialities), {}, {:class => "form-input_solicitud mover_solicitud_ele mover_ele"})%>
-        </div>
 
         <div>
           <%= f.submit "CREAR", class:"btn-speciality mover_boton_solicitud" %>

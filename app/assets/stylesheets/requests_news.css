@@ -104,6 +104,14 @@
   color:  rgb(18, 161, 155); /*Tamaño de letra, tipo, estilo y color de las etiquetas"*/
   margin-top: 3%; /*Margenes superior de las etiquetas*/
 }
+.mover_esp{
+  margin-left: 5%;
+  margin-top: 1%;
+}
+.mover_esp2{
+  margin-top: 0%;
+  margin-left: 4.5%;
+}
 /*Propiedades de las campos que se encuentran en el div formulario*/
 .form-input_solicitud{
   height: 30px;
@@ -119,7 +127,8 @@
 }
 /*Propiedades del boton que se encuentran en el div formulario*/
 .mover_boton_solicitud{
-  margin-left: 75%;
+  padding: 1% 5%;
+  margin-left: 64%;
   margin-top: -7%; /*Margenes izquierdo y superior del boton*/
 }
 
