@@ -1,0 +1,2 @@
+module AllacceptedsHelper
+end

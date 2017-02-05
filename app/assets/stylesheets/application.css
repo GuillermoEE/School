@@ -153,3 +153,38 @@ body{
   background-color: white;
 
 }
+/*actions*/
+
+.actionsBox{
+  display: flex;
+  background-color: white;
+  margin-left: 350px;
+  margin-top: 210px;
+  width: 600px;
+  height: 200px;
+  border-top: 20px;
+  border-color:   #104669;
+  border-style: solid;
+}
+.boxTitulo{
+  font-family: 'Asap', sans-serif;
+  font-size: 20px;
+}
+.description{
+  color: grey;
+  margin-top: 20px;
+}
+.boxText{
+  margin-top: 50px;
+}
+.returnBotton{
+  margin-left: 340px;
+  margin-top: 10px;
+}
+.returnBotton a:hover {
+  text-decoration: none;
+  background-color: #ededed;
+}
+.boxImage{
+  margin-top: 20px;
+}

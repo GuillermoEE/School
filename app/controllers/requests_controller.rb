@@ -35,10 +35,6 @@ class RequestsController < ApplicationController
   def show
   end
 
-  def delateAll
-      Request.destroy_all
-  end
-
   # GET /requests/new
   def new
     @request = Request.new
