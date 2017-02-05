@@ -11,12 +11,9 @@
 #
 
 default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: root
-  password: 123
-  socket: /var/run/mysqld/mysqld.sock
+  adapter: sqlite3
+  pool: 50
+  timeout: 50000
 
 
 development:

@@ -1,44 +1,54 @@
-<p id="notice"><%= notice %></p>
+<p class="etiqueta_solicitud", id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @request.name %>
-</p>
+<div class="div_nueva_especialidad div_nueva_solicitud">
 
-<p>
-  <strong>Apellidopaterno:</strong>
-  <%= @request.apellidoPaterno %>
-</p>
+    <div class="imagen_nuevaespecialidad">
+      <%= image_tag("lap.png", class: "lap_specialities lap_srq")%>
+    </div>
 
-<p>
-  <strong>Apellidomaterno:</strong>
-  <%= @request.apellidoMaterno %>
-</p>
+    <div class="div_nueva_agregada nueva_agregada_sol">
+      <p class="etiqueta_solicitud cam_in_sol speciality_new_index name_req_index">
+        <strong>Nombre: </strong>
+        <%= @request.name %>
+      </p>
 
-<p>
-  <strong>Exammark:</strong>
-  <%= @request.examMark %>
-</p>
+      <p class="etiqueta_solicitud cam_in_sol speciality_new_index">
+        <strong>Apellido Paterno: </strong>
+        <%= @request.apellidoPaterno %>
+      </p>
 
-<p>
-  <strong>Schoolaverage:</strong>
-  <%= @request.schoolAverage %>
-</p>
+      <p class="etiqueta_solicitud cam_in_sol speciality_new_index">
+        <strong>Apellido Materno: </strong>
+        <%= @request.apellidoMaterno %>
+      </p>
 
-<p>
-  <strong>Isforeign:</strong>
-  <%= @request.isForeign %>
-</p>
+      <p class="etiqueta_solicitud cam_in_sol speciality_new_index">
+        <strong>Calificación Examen:</strong>
+        <%= @request.examMark %>
+      </p>
 
-<p>
-  <strong>Speciality:</strong>
-  <%= @request.speciality %>
-</p>
+      <p class="etiqueta_solicitud cam_in_sol speciality_new_index">
+        <strong>Promedio Secundaria:</strong>
+        <%= @request.schoolAverage %>
+      </p>
 
-<p>
-  <strong>Secondspeciality:</strong>
-  <%= @request.secondSpeciality %>
-</p>
+      <p class="etiqueta_solicitud cam_in_sol speciality_new_index">
+        <strong>Foraneo:</strong>
+        <%= @request.isForeign %>
+      </p>
 
-<%= link_to 'Edit', edit_request_path(@request) %> |
-<%= link_to 'Back', requests_path %>
+      <p class="etiqueta_solicitud cam_in_sol speciality_new_index">
+        <strong>Especialidad:</strong>
+        <%= @request.speciality %>
+      </p>
+
+      <p class="etiqueta_solicitud cam_in_sol speciality_new_index">
+        <strong>Segunda Espacialidad:</strong>
+        <%= @request.secondSpeciality %>
+      </p>
+
+      <%= link_to 'Edit', edit_request_path(@request), class: "btn-speciality acomodar_sol_index edit_sp_index " %>
+      <%= link_to 'Back', requests_path, class: "btn-speciality acomodar_sol_index back_sp_index back_rq_index" %>
+    </div>
+  </div>
+</div>

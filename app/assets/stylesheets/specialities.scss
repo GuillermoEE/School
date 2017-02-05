@@ -1,6 +1,161 @@
 // Place all the styles related to the specialities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  text-decoration: none;
+}
 .espe{
   padding-top: 100px;
+  margin-left: 17%;
+  margin-right: 17%;
+}
+.cam_in_sol{
+  color: white;
+  margin-top: 5%;
+  font-size: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.especialidades_soli{
+  background-color: white;
+  width: 15%;
+  margin-left: 10%;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 50%;
+  font-size: 80%;
+}
+.hola_sol{
+  width: 20%;
+  background-color:	#393546;
+  height: 40px;
+  text-align: center;
+}
+.especialidades_soli2{
+  background-color: white;
+  width: 11%;
+  margin-left: 10%;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 50%;
+  font-size: 80%;
+}
+.h1_sol_pri{
+  margin-bottom: 2%;
+  text-align: center;
+  width: 99.95%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  font-size: 200%;
+  background-color:	#393546;
+  color: white;
+}
+.especialidades_soli3{
+  background-color: white;
+  width: 2%;
+  margin-left: 10%;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 50%;
+  font-size: 80%;
+}
+a:hover{
+  color: black;
+}
+a:visited{
+  color: black;
+}
+a{
+  color: black;
+}
+.acomodar_sol_index{
+  padding: 0%;
+  width: 10%;
+  padding-top: 0.5%;
+  padding-bottom: 0.7%;
+  text-align: center;
+  color: white;
+  font-size: 90%;
+  margin-left: 72.5%;
+  margin-top: 5%;
+}
+@media screen and (max-width: 850px){
+  .cam_in_sol{
+    font-size: 70%;
+  }
+  .acomodar_sol_index{
+    font-size: 60%;
+  }
+  .especialidades_soli{
+    font-size: 70%;
+  }
+  .especialidades_soli2{
+    font-size: 70%;
+  }
+  .especialidades_soli3{
+    font-size: 70%;
+  }
+  .h1_sol_pri{
+    width: 99.95%;
+    font-size: 150%;
+  }
+}
+
+.div_nueva_especialidad{
+  background-color: #393546;
+  width: 50%;
+  height: 290px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 7%;
+}
+.speciality_new_index{
+  margin-bottom: 0.5%;
+  padding-bottom:0.5%;
+  line-height: 5%;
+  margin-top: 1.5%;
+  margin-left: 60%;
+}
+.back_sp_index{
+  margin-top: -8.2%;
+  margin-left: 85%;
+}
+.name_new_index{
+  padding-top: 7%;
+}
+.imagen_nuevaespecialidad{
+  float: left;
+  width: 40%;
+  height: 80%;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+.lap_specialities{
+  float: left;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.name_req_index{
+  padding-top: 3%;
+}
+.div_nueva_solicitud{
+  margin-top: 7%;
+  height: 380px;
+}
+.nueva_agregada_sol{
+  margin-left: -20%;
+}
+.back_rq_index{
+  margin-top: -7.9%;
+}
+.lap_srq{
+  margin-top: 20%;
+}
+.total_sol{
+  font-size: 100%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  background-color: white;
+  color: 	#393546;
 }

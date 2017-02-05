@@ -341,3 +341,45 @@
     background-color: rgb(218, 218, 218); /*Color de fondo de los botones "Crear Especialidad y Cancelar"*/
   }
 }
+
+.acomodar_alum_re2{
+  width: 40%;
+  margin-left: 8%;
+  margin-top: 1%;
+}
+.acomodar_alum_re{
+  margin-top: 2%;
+}
+.acomodar_alum_re3{
+  margin-left: 7.5%;
+}
+.acomodar_alum_re4{
+  margin-left: 7.5%;
+  width: 47.5%;
+}
+.acomodar_alum_re5{
+  margin-left: 16%;
+  width: 47.5%;
+}
+.acomodar_alum_re6{
+  margin-left: 13%;
+  width: 50%;
+}
+.comodar_alum_re2{
+  margin-top: 5%;
+}
+.comodar_alum_re{
+  margin-top: 4%;
+}
+.acomodar_btn_alum_recom{
+  padding: 2% 3.5%;
+  float: left; /*Posicion de los botones "Cancelar"*/
+  color: rgb(000, 000, 000); /*Color de letra de los botones "Cancelar"*/
+  background-color: rgb(218, 218, 218); /*Color del boton "Cancelar"*/
+  margin-left: 40%;
+  margin-top: -6%;/*Margenes izquierdo y superior de los botones "Cancelar"*/
+}
+.cambio_div_alum_rec{
+  border-radius: 0px;
+  background-color: #12A19B;
+}

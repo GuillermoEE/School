@@ -1,11 +1,9 @@
+
 /*Propiedades Generales*/
 *{
   margin: 0 auto;
   font-family: "Open Sans";
   text-decoration: none;
-}
-.cambio_div_alum_rec{
-  border-radius: 0px;
 }
 /*Propiedades del la imagen de laptop que se encuentra en el div container_alum_recom*/
 .lap_alum_recom{
@@ -54,12 +52,12 @@
   font-size: 110%;
   font-family: "Open Sans";
   color: rgb(255, 255, 255); /*Tamano de letra, tipo y color los botones"Crear Especialidad y Cancelar"*/
-  padding: 3% 3.5%; /*Padding superior y derecho del botones "Crear Especialidad y Cancelar"*/
+  padding: 1.5% 3.5%; /*Padding superior y derecho del botones "Crear Especialidad y Cancelar"*/
   border-radius: 14px; /*Bordes redondeados los botones¿ "Crear Especialidad y Cancelar"*/
   border: none; /*Tipo de borde: ninguno, los botones "Crear Especialidad y Cancelar"*/
-  background-color: rgb(18, 161, 155); /*Color del boton "Crear Especialidad y Cancelar""*/
-  margin-left: 50%;
-  margin-top: 3%;
+  background-color: 	#52AFE3; /*Color del boton "Crear Especialidad y Cancelar""*/
+  margin-left: 70%;
+  margin-top: -1.2%;
 }
 /*Propiedades del boton "Cancelar" que se encuentran en el div container_new_specialities2*/
 .acomodar_btn_alum_recom{

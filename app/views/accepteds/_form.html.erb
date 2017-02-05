@@ -1,5 +1,8 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
 <%= render 'helpersLayout/header' %>
-<section class="mainBox">
+<section class="PrincipalNewSpecialities mainBox">
 
 
   <%= form_for(accepted) do |f| %>
@@ -15,38 +18,46 @@
       </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+    <div class="container_new_specialities sombra_speciality cambio_div_alum_rec">
+      <%= image_tag("lap.png", class: "lap_alum_recom")%>
+      <p class="welcome_alum_recom welcome_new_specialities">ALUMNO</p>
     </div>
 
-    <div class="field">
-      <%= f.label :apellidoPaterno %>
-      <%= f.text_field :apellidoPaterno %>
-    </div>
+    <div class="container_new_specialities2 sombra_speciality">
+      <div>
+        <%= f.label :name, "NOMBRE", class: "speciality_texto comodar_alum_re2" %>
+        <%= f.text_field :name, class:"form-input_speciality comodar_alum_re" %>
+      </div>
 
-    <div class="field">
-      <%= f.label :apellidoMaterno %>
-      <%= f.text_field :apellidoMaterno %>
-    </div>
+      <div>
+        <%= f.label :apellidoPaterno, "APELLIDO PATERNO", class: "speciality_texto acomodar_alum_re"  %>
+        <%= f.text_field :apellidoPaterno, class:"acomodar_alum_re2 form-input_speciality "%>
+      </div>
 
-    <div class="field">
-      <%= f.label :finalSpeciality %>
-      <%= f.text_field :finalSpeciality %>
-    </div>
+      <div>
+        <%= f.label :apellidoMaterno, "APELLIDO MATERNO", class: "speciality_texto acomodar_alum_re"  %>
+        <%= f.text_field :apellidoMaterno, class:"form-input_speciality acomodar_alum_re2 acomodar_alum_re3" %>
+      </div>
 
-    <div class="field">
-      <%= f.label :turn %>
-      <%= f.text_field :turn %>
-    </div>
+      <div>
+        <%= f.label :finalSpeciality, "ESPECIALIDAD", class: "speciality_texto acomodar_alum_re"  %>
+        <%= f.text_field :finalSpeciality,class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re4" %>
+      </div>
 
-    <div class="field">
-      <%= f.label :group %>
-      <%= f.text_field :group %>
-    </div>
+      <div>
+        <%= f.label :turn, "TURNO", class: "speciality_texto acomodar_alum_re"  %>
+        <%= f.text_field :turn, class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re5" %>
+      </div>
 
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+      <div>
+        <%= f.label :group, "GRUPO", class: "speciality_texto acomodar_alum_re"  %>
+        <%= f.text_field :group, class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re6" %>
+      </div>
+
+      <div>
+        <%= f.submit "CREAR", class:"btn-alum_recom"%>
+        <%= link_to 'CANCELAR', accepteds_path, class: "btn-speciality acomodar_btn_alum_recom" %>
+      </div>
+    <% end %>
+  </div>
 </section>

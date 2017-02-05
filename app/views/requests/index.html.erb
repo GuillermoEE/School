@@ -42,17 +42,20 @@
 
   </div>
   <div id="solicitudes">
-    <p id="total">Total de solicitudes: <%=Request.all.length%></p>
+    <div class="h1_sol_pri etiqueta_solicitud total_sol">
+      <p>Total de solicitudes: <%=Request.all.length%></p>
+    </div>
+
     <table>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Apellido paterno</th>
-          <th>Apellido materno</th>
-          <th>Examen</th>
-          <th>Secundaria</th>
-          <th>Primera Especialidad</th>
-          <th>Segunda Especialidad</th>
+      <thead class="hola_sol">
+        <tr class="hola_sol">
+          <th class="etiqueta_solicitud cam_in_sol">Nombre</th>
+          <th class="etiqueta_solicitud cam_in_sol">Apellido paterno</th>
+          <th class="etiqueta_solicitud cam_in_sol">Apellido materno</th>
+          <th class="etiqueta_solicitud cam_in_sol">Examen</th>
+          <th class="etiqueta_solicitud cam_in_sol">Secundaria</th>
+          <th class="etiqueta_solicitud cam_in_sol">Primera Especialidad</th>
+          <th class="etiqueta_solicitud cam_in_sol">Segunda Especialidad</th>
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -60,15 +63,15 @@
       <tbody>
         <% @requests.each do |request| %>
           <tr>
-            <td><%= request.name %></td>
-            <td><%= request.apellidoPaterno %></td>
-            <td><%= request.apellidoMaterno %></td>
-            <td><%= request.examMark %></td>
-            <td><%= request.schoolAverage %></td>
-            <td><%= request.speciality %></td>
-            <td><%= request.secondSpeciality %></td>
-            <td><%= link_to 'Edit', edit_request_path(request) %></td>
-            <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td class="etiqueta_solicitud especialidades_soli"><%= request.name %></td>
+            <td class="etiqueta_solicitud especialidades_soli2"><%= request.apellidoPaterno %></td>
+            <td class="etiqueta_solicitud especialidades_soli2"><%= request.apellidoMaterno %></td>
+            <td class="etiqueta_solicitud especialidades_soli2"><%= request.examMark %></td>
+            <td class="etiqueta_solicitud especialidades_soli2"><%= request.schoolAverage %></td>
+            <td class="etiqueta_solicitud especialidades_soli2"><%= request.speciality %></td>
+            <td class="etiqueta_solicitud especialidades_soli2"><%= request.secondSpeciality %></td>
+            <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'E', edit_request_path(request) %></td>
+            <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'D', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
