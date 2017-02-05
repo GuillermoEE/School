@@ -17,7 +17,7 @@
   float: left; /*Posicion del div container_solicitud2 */
   width: 70%;
   height: 570px; /*Tamaño del div container_solicitud2 */
-  background-color: #202020;  /*Color del div container_solicitud2 */
+  background-color: rgb(057, 053, 070);  /*Color del div container_solicitud2 */
   border-radius: 7px; /*Bordes redondeados del div container_solicitud2 */
   margin-left: 2%; /*Margen izquierdo del div container_solicitud2 */
 }
@@ -48,7 +48,7 @@
   width: 150px;
   height: 150px; /*Tamaño de div datos_solicitud*/
   border-radius: 15px; /*Redondear bordes de div datos_solicitud*/
-  background-color: rgb(255, 022, 022); /*Color de div datos_solicitud*/
+  background-color:rgb(18, 161, 155); /*Color de div datos_solicitud*/
   margin-left: 25%;
   margin-top: 10%; /*Margenes izquierdo y superior de div datos_solicitud*/
 }
@@ -121,7 +121,7 @@
   color: #d4d4d4;/*Tamaño de letra, tipo y color de los campos*/
   border-style: solid;
   border-color:#d4d4d4; /*Tipo de borde y color de los campos*/
-  background-color:#202020; /*Color de los campos*/
+  background-color:rgb(057, 053, 070);  /*Color de los campos*/
   padding-left: 9%;
   margin-top: 2%; /*Padding izquierdo y margen superior de los campos*/
 }
@@ -131,7 +131,18 @@
   margin-left: 64%;
   margin-top: -7%; /*Margenes izquierdo y superior del boton*/
 }
+.back_request{
+  margin-left: 25%;
+  margin-top: -7%;
+  background-color: rgb(18, 161, 155);
+  color: white;
+}
 
+@media screen and (max-width: 1200px){
+  .back_request{
+    margin-top: -10%;
+  }
+}
 /*Cambios que se dan cuando la pantalla se reduce a 900px*/
 @media screen and (max-width: 900px){
   /*Cambios de div datos_solicitud del container_solicitud2*/
@@ -141,11 +152,10 @@
     margin-left: 25%; /*Margen superior de div datos_solicitud*/
   }
   /*Cambios del boton que se encuentran en el div formulario*/
-  .mover_boton_solicitud{
-    margin-top: 5%; /*Margen superior del boton*/
+  .back_request{
+    margin-top: -12%;
   }
 }
-
 /*Cambios que se dan cuando la pantalla se reduce a 600px*/
 @media screen and (max-width: 600px){
   /*Cambios del div solicitud y texto que contiene la informacion de la seccion*/
@@ -156,5 +166,8 @@
   .formulario_solicitud{
     width: 80%;  /*Tamaño del div que contiene el formulario*/
     margin-left: 8%; /*Margen superior del div que contiene el formulario*/
+  }
+  .back_request{
+    margin-top: -15%;
   }
 }

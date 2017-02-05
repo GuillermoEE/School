@@ -153,3 +153,7 @@ body{
   background-color: white;
 
 }
+.navbar-link{
+  font-family: "Open Sans";
+  color: white;
+}
