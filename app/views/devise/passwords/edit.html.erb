@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<section class="PrincipalLogin">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="container_login">
+    <%= image_tag("logo.png", class: "logo_login mover_logo_login")%>
+    <p class="text_login">Siga las instruccione para cambiar su contraseña</p>
+    <%=  image_tag("lap.png", class: "lap_login")%>
+  </div>
+
+  <div class="container_login">
+
+    <div>
+      <%= f.label :password, "NUEVA CONTRASEÑA", class: "login_texto mover_sign_up_password"%><br />
+      <% if @minimum_password_length %>
+        <em class="caracter_minimo_sign_up">(<%= @minimum_password_length %> caracteres minimo)</em><br />
+      <% end %>
+      <%= f.password_field :password, autofocus: true, autocomplete: "off", placeholder: "Escribe tu contraseña", class:"form-input_login"%>
+    </div>
+
+    <div>
+      <%= f.label :password_confirmation, "CONFIRMAR CONTRASEÑA", class: "login_texto mover_sign_up_password" %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Escribe tu contraseña nuevamente", class:"form-input_login"%>
+    </div>
+
+    <div>
+      <%= f.submit "CONFIRMAR", class:"btn-login mover_boton_sign_up" %>
+      <%= render "devise/shared/links" %>
+    </div>
+    <% end %>
+
+  </div>
+</section>

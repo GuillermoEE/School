@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<section class="PrincipalLogin">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+
+  <div class="container_login">
+    <p class="welcome_login">Bienvenido a</p>
+    <%= image_tag("logo.png", class: "logo_login")%>
+    <p class="text_login">Crea una cuenta para acceder a todas las funciones de la página</p>
+    <%=image_tag("lap.png", class: "lap_login")%>
+  </div>
+
+  <div class="container_login2">
+
+    <div>
+      <%= f.label :email, "EMAIL", class: "login_texto mover_sign_up" %><br />
+      <%= f.email_field :email, autofocus: true, placeholder: "Escribe tu email", class:"form-input_login" %>
+    </div>
+
+    <div>
+      <%= f.label :password, "PASSWORD", class: "login_texto mover_sign_up_password"%>
+      <% if @minimum_password_length %>
+      <em class="caracter_minimo_sign_up">(<%= @minimum_password_length %> caracteres minimo)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Escribe tu contraseña", class:"form-input_login" %>
+    </div>
+
+    <div>
+      <%= f.label :password_confirmation,  "PASSWORD", class: "login_texto mover_sign_up_password"%><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Escribe tu contraseña nuevamente", class:"form-input_login" %>
+    </div>
+
+    <div>
+      <%= f.submit "SIGN UP", class:"btn-login mover_boton_sign_up" %>
+      <%- if controller_name != 'sessions' %>
+        <%= link_to "Log in", new_session_path(resource_name), class:"remember_login log_in_mover mover_sign_up_sec_registro"%><br />
+      <% end -%>
+    </div>
+    <% end %>
+  </div>
+</section>

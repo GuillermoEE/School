@@ -219,3 +219,20 @@ footer{
 #move_logo{
   margin-left: 100px;
 }
+
+/*CSS especila para la seccion de desarrolladores hecho por Ely*/
+/*Propiedades del encabezado "¿quienes somos? de la seccion desarrolladores"*/
+.desarrolladores_h2{
+  font-size: 200%; /*Tamaño de letra del encabezado "¿quienes somos?"*/
+  margin-bottom: 5%; /*Margen inferior del encabezado "¿quienes somos?"*/
+}
+/*Propiedades dek texto de la seccion desarrolladores"*/
+.desarrolladores_texto{
+  width: 70%; /*Tamaño del espacio ocupado por texto de la seccion desarrolladores"*/
+  line-height: 140%; /*Interlineado del texto de la seccion desarrolladores"*/
+  margin-top: 2%; /*Margen superior del texto de la seccion desarrolladores"*/
+}
+/*Propiedades del encabezado "EduTrack" de la seccion desarrolladores"*/
+.mover_edutrack{
+  margin-top: -6%; /*Margen superior  encabezado "EduTrack" de la seccion desarrolladores"*/
+}

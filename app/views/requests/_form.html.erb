@@ -1,11 +1,31 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <%= render 'helpersLayout/header' %>
-<section id="formulario" class="mainBox">
-  <p>Nueva solicitud</p>
+
+<div class="container_solicitud mainBox">
+  <div id="actionR">
+    <div id="move_titu">
+      <h1 id="titu">SOLICITUDES</h1>
+    </div>
+    <div id="actions_request">
+      <ul>
+        <li><div class="moveActions_Request"><span class="icon-plus"></span> <p><%= link_to 'Nueva solicitud', new_request_path %></p></div></li>
+        <li><div class="moveActions_Request"><a href="/delateAll">eliminar</a></div></li>
+      </ul>
+    </div>
+  <%= form_tag import_requests_path, multipart: true do %>
+      <%= file_field_tag :file%>
+      <%= submit_tag "Importar"%>
+  <% end %>
+  </div>
+</div>
+
+<section class="PrincipalNewSpecialities mainBox">
+
   <%= form_for(request) do |f| %>
     <% if request.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(request.errors.count, "error") %> prohibited this request from being saved:</h2>
-
         <ul>
         <% request.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -14,45 +34,64 @@
       </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+    <div class="container_solicitud2">
+
+      <div class="solicitud_y_textos">
+        <p class="etiqueta_solicitud">Nueva Solicitud</p>
+        <p class="solicitud_texto text_new_specialities">Aquí podrás añadir una nueva solicitud</p>
+
+        <div class="datos_solicitud">
+          <%= image_tag("user.png", class: "user_solicitud")%>
+          <p class="text_new_specialities soli_datos">Datos</p>
+        </div>
+      </div>
+
+      <div class="formulario_solicitud">
+
+        <div>
+          <%= f.label :name, "NOMBRE", class: "etiqueta_solicitud mover_solicitud_ele" %>
+          <%= f.text_field :name, class:"form-input_solicitud mover_solicitud_ele mover_ele" %>
+        </div>
+
+        <div class="contiene_apellidos">
+          <div class="mover_apellido_paterno margen_apeliido">
+            <%= f.label :apellidoPaterno, "APELLIDO PATERNO", class: "etiqueta_solicitud" %>
+            <%= f.text_field :apellidoPaterno, class:"form-input_solicitud" %>
+          </div>
+
+          <div class="mover_apellido_paterno margen_apeliido2">
+            <%= f.label :apellidoMaterno, "APELLIDO MATERNO", class: "etiqueta_solicitud" %>
+            <%= f.text_field :apellidoMaterno, class:"form-input_solicitud" %>
+          </div>
+        </div>
+
+        <div>
+          <%= f.label :examMark, "PUNTAJE DE EXAMEN", class: "etiqueta_solicitud mover_solicitud_ele"  %>
+          <%= f.text_field :examMark, class:"form-input_solicitud mover_solicitud_ele mover_ele " %>
+        </div>
+
+        <div>
+          <%= f.label :schoolAverage, "PROMEDIO DE SECUNDARIA", class: "etiqueta_solicitud mover_solicitud_ele" %>
+          <%= f.text_field :schoolAverage, class:"form-input_solicitud mover_solicitud_ele mover_ele" %>
+        </div>
+
+        <div class="contiene_apellidos">
+          <div class="mover_apellido_paterno margen_apeliido mover_esp">
+            <%= f.label :speciality, "ESPECIALIDAD", class: "etiqueta_solicitud mover_solicitud_ele" %>
+            <%= f.select(:speciality, options_for_select(@specialities), {}, {class:"form-input_solicitud mover_solicitud_ele mover_ele"})%>
+          </div>
+
+          <div class="mover_apellido_paterno margen_apeliido2 mover_esp2">
+            <%= f.label :secondSpeciality, "SEGUNDA ESPECIALIDAD", class: "etiqueta_solicitud mover_solicitud_ele mover_solicitud_ele mover_ele" %>
+            <%= f.select(:secondSpeciality, options_for_select(@specialities), {}, {:class => "form-input_solicitud mover_solicitud_ele mover_ele"})%>
+          </div>
+        <div>
+
+        <div>
+          <%= f.submit "CREAR", class:"btn-speciality mover_boton_solicitud" %>
+        </div>
+
+      </div>
     </div>
-
-    <div class="field">
-      <%= f.label :apellidoPaterno %>
-      <%= f.text_field :apellidoPaterno %>
-    </div>
-
-    <div class="field">
-      <%= f.label :apellidoMaterno %>
-      <%= f.text_field :apellidoMaterno %>
-    </div>
-
-    <div class="field">
-      <%= f.label :examMark %>
-      <%= f.text_field :examMark %>
-    </div>
-
-    <div class="field">
-      <%= f.label :schoolAverage %>
-      <%= f.text_field :schoolAverage %>
-    </div>
-
-
-    <div class="field">
-      <%= f.label :speciality %>
-      <%= f.select(:speciality,options_for_select(@specialities))%>
-    </div>
-
-    <div class="field">
-      <%= f.label :secondSpeciality %>
-      <%= f.select(:secondSpeciality,options_for_select(@specialities))%>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-
   <% end %>
 </section>

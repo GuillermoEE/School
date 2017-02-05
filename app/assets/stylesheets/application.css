@@ -188,3 +188,8 @@ body{
 .boxImage{
   margin-top: 20px;
 }
+
+.navbar-link{
+  font-family: "Open Sans";
+  color: white;
+}

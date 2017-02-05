@@ -1,3 +1,9 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<%= render 'helpersLayout/header' %>
+
+<section class="PrincipalNewSpecialities mainBox">
 <%= form_for(speciality) do |f| %>
   <% if speciality.errors.any? %>
     <div id="error_explanation">
@@ -11,37 +17,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="container_new_specialities sombra_speciality">
+    <p class="welcome_new_specialities">Nueva Especialidad</p>
+    <p class="text_new_specialities">Aquí podrás añadir una nueva especialidad</p>
+    <%= image_tag("lap.png", class: "lap_new_specialities")%>
   </div>
 
-  <div class="field">
-    <%= f.label :morningTurn %>
-    <%= f.check_box :morningTurn %>
-  </div>
+  <div class="container_new_specialities2 sombra_speciality">
+    <div>
+      <%= f.label :name, "NOMBRE", class: "speciality_texto" %>
+      <%= f.text_field :name, class:"form-input_speciality "%>
+    </div>
 
-  <div class="field">
-    <%= f.label :eveningTurn %>
-    <%= f.check_box :eveningTurn %>
-  </div>
+    <div>
+      <%= f.label :Turn, "TURNO", class: "speciality_texto acomodar_etiqueta_speciality" %>
+      <%= f.label :morningTurn, "TM", class: "speciality_texto acomodar_tm_speciality" %>
+      <%= f.check_box :morningTurn, placeholder: "TM", class:"caja_speciality" %>
+      <%= f.label :morningTurn, "Turno Matutino", class: "remember_speciality" %>
+      <%= f.label :eveningTurn, "TV", class: "speciality_texto acomodar_tv_speciality" %>
+      <%= f.check_box :eveningTurn, placeholder: "TV", class:"caja_speciality" %>
+      <%= f.label :morningTurn, "Turno Vespertino", class: "remember_speciality" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :morningClasses %>
-    <%= f.text_field :morningClasses %>
-  </div>
+    <div>
+      <%= f.label :morningClasses , "CLASES MATUTINAS", class: "speciality_texto acomodar_speciality"  %>
+      <%= f.text_field :morningClasses, class:"form-input_speciality clases_matutinas_speciality" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :eveningClasses %>
-    <%= f.text_field :eveningClasses %>
-  </div>
+    <div>
+      <%= f.label :eveningClasses, "CLASES VESPERTINAS", class: "speciality_texto acomodar_speciality2" %>
+      <%= f.text_field :eveningClasses, class:"form-input_speciality clases_vespertinas_speciality" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :numberStudents %>
-    <%= f.number_field :numberStudents %>
-  </div>
+    <div>
+      <%= f.label :numberStudents , "NÚMERO DE ESTUDIANTES", class: "speciality_texto acomodar_speciality2" %>
+      <%= f.number_field :numberStudents, class:"form-input_speciality numero_estudiantes_speciality" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
+    <div>
+      <%= f.submit "CREAR ESPECIALIDAD", class:"btn-speciality"%>
+      <%= link_to 'CANCELAR', specialities_path, class: "btn-speciality acomodar_btn_speciality" %>
+    </div>
+   <% end %>
   </div>
-<% end %>
+</section>
