@@ -12,7 +12,6 @@
 <%= render 'helpersLayout/header' %>
 
 <section class="mainBox" id="request_section">
-  <p id="notice"><%= notice %></p>
   <div id="actionR">
     <div id="move_titu">
       <h1 id="titu">SOLICITUDES</h1>
@@ -71,7 +70,7 @@
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.speciality %></td>
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.secondSpeciality %></td>
             <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'E', edit_request_path(request) %></td>
-            <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'D', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'D', request, method: :delete, data: { confirm: '¿Desea eliminar el elemento?' } %></td>
           </tr>
         <% end %>
       </tbody>

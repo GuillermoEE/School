@@ -23,8 +23,20 @@
       <% @specialities.each do |speciality| %>
         <tr>
           <td class="etiqueta_solicitud especialidades_soli"><%= speciality.name %></td>
-          <td class="etiqueta_solicitud especialidades_soli2"><%= speciality.morningTurn %></td>
-          <td class="etiqueta_solicitud especialidades_soli2"><%= speciality.eveningTurn %></td>
+          <td class="etiqueta_solicitud especialidades_soli2">
+            <% if speciality.morningTurn %>
+              <strong>Habilitado</strong>
+            <%elsif speciality.morningTurn == false %>
+              <strong>Deshabilitado</strong>
+            <% end %>
+          </td>
+          <td class="etiqueta_solicitud especialidades_soli2">
+            <% if speciality.eveningTurn %>
+              <strong>Habilitado</strong>
+            <%elsif speciality.eveningTurn == false %>
+              <strong>Deshabilitado</strong>
+            <% end %>
+          </td>
           <td class="etiqueta_solicitud especialidades_soli2"><%= speciality.morningClasses %></td>
           <td class="etiqueta_solicitud especialidades_soli2"><%= speciality.eveningClasses %></td>
           <td class="etiqueta_solicitud especialidades_soli2"><%= speciality.numberStudents %></td>
