@@ -15,11 +15,13 @@
  */
  @font-face {
    font-family: 'icomoon';
+
    src:  url('fonts/icomoon.eot?gred5h');
    src:  url('fonts/icomoon.eot?gred5h#iefix') format('embedded-opentype'),
      url('fonts/icomoon.ttf?gred5h') format('truetype'),
      url('fonts/icomoon.woff?gred5h') format('woff'),
      url('fonts/icomoon.svg?gred5h#icomoon') format('svg');
+
    font-weight: normal;
    font-style: normal;
  }
@@ -84,6 +86,7 @@
  .icon-mail:before {
    content: "\e90e";
  }
+
 
  html, body, div, span, applet, object, iframe,
  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -174,7 +177,11 @@ header nav ul li a:hover{
    font-weight: 900;
  }
 #bar{
+
  margin-left: 80px;
+=======
+ margin-left: 140px;
+>>>>>>> LaMeraMera
  margin-top: 15px;
  margin-right: 100px
 }
@@ -185,6 +192,7 @@ header nav ul li a:hover{
 }
 #login{
   margin-top: 8px;
+<<<<<<< HEAD
   position: absolute;
   right: .5em;
 }
@@ -199,6 +207,7 @@ header nav ul li a:hover{
 #login a:hover{
   text-decoration: none;
   color: grey;
+
 }
 body{
   background-color: #ededed;
@@ -209,6 +218,7 @@ body{
   background-color: white;
 
 }
+
 /*actions*/
 
 .actionsBox{

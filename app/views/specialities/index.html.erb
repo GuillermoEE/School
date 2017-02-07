@@ -1,5 +1,6 @@
 <%= render 'helpersLayout/header' %>
 
+<<<<<<< HEAD
 <section class="espe">
 
   <div class="h1_sol_pri etiqueta_solicitud">
@@ -22,6 +23,7 @@
     <tbody>
       <% @specialities.each do |speciality| %>
         <tr>
+
           <td class="etiqueta_solicitud especialidades_soli"><%= speciality.name %></td>
           <td class="etiqueta_solicitud especialidades_soli2">
             <% if speciality.morningTurn %>
@@ -43,10 +45,12 @@
           <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'S', speciality %></td>
           <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'E', edit_speciality_path(speciality) %></td>
           <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'D', speciality, method: :delete, data: { confirm: '¿Desea eliminar el elemento?' } %></td>
+
         </tr>
       <% end %>
     </tbody>
   </table>
 </section>
+
 
 <%= link_to 'AGREGAR', new_speciality_path, class: "btn-speciality acomodar_sol_index" %>

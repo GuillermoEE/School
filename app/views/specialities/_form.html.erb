@@ -1,9 +1,11 @@
+
 <%= stylesheet_link_tag "application", :media => "all" %>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 <%= render 'helpersLayout/header' %>
 
 <section class="PrincipalNewSpecialities mainBox">
+
 <%= form_for(speciality) do |f| %>
   <% if speciality.errors.any? %>
     <div id="error_explanation">
@@ -17,6 +19,7 @@
     </div>
   <% end %>
 
+<<<<<<< HEAD
   <div class="container_new_specialities sombra_speciality">
     <p class="welcome_new_specialities">Nueva Especialidad</p>
     <p class="text_new_specialities">Aquí podrás añadir una nueva especialidad</p>

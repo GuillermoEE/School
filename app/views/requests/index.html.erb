@@ -12,6 +12,7 @@
 <%= render 'helpersLayout/header' %>
 
 <section class="mainBox" id="request_section">
+
   <div id="actionR">
     <div id="move_titu">
       <h1 id="titu">SOLICITUDES</h1>
@@ -19,6 +20,7 @@
     <div id="actions_request">
       <ul>
         <li><div class="moveActions_Request"><span class="icon-plus"></span> <p><%= link_to 'Nueva solicitud', new_request_path %></p></div></li>
+<<<<<<< HEAD
         <li><div class="moveActions_Request" id="loading"><span id="destroy_requests">Eliminar</span></div></li>
         <li>
           <div class="moveActions_Request">
@@ -55,6 +57,7 @@
           <th class="etiqueta_solicitud cam_in_sol">Secundaria</th>
           <th class="etiqueta_solicitud cam_in_sol">Primera Especialidad</th>
           <th class="etiqueta_solicitud cam_in_sol">Segunda Especialidad</th>
+
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -62,6 +65,7 @@
       <tbody>
         <% @requests.each do |request| %>
           <tr>
+
             <td class="etiqueta_solicitud especialidades_soli"><%= request.name %></td>
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.apellidoPaterno %></td>
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.apellidoMaterno %></td>
@@ -71,6 +75,7 @@
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.secondSpeciality %></td>
             <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'E', edit_request_path(request) %></td>
             <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'D', request, method: :delete, data: { confirm: '¿Desea eliminar el elemento?' } %></td>
+
           </tr>
         <% end %>
       </tbody>

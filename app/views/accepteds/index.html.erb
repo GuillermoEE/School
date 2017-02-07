@@ -18,7 +18,8 @@
     <div class="actionsG">
       <ul>
         <li><p><%= link_to 'Agregar', new_accepted_path %></p></li>
-        <div class="",id="loading"><li><a href="/delateAll1">Vaciar bases de datos</a></li></div>
+
+        <div class="",id="loading1"><li><a href="/delateAll1">Vaciar bases de datos</a></li></div>
         <li><a href="#">Revisar grupos</a>
           <ul>
             <li>
@@ -29,6 +30,7 @@
             </li>
           </ul>
         </li>
+
         <li>
           <%= form_tag(accepteds_path, :method => "get", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], placeholder: "", id: "buscador" %>

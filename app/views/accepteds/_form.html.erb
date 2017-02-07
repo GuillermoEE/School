@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 <%= stylesheet_link_tag "application", :media => "all" %>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 <%= render 'helpersLayout/header' %>
 <section class="PrincipalNewSpecialities mainBox">
+=======
+<%= render 'helpersLayout/header' %>
+<section class="mainBox">
+>>>>>>> LaMeraMera
 
 
   <%= form_for(accepted) do |f| %>
@@ -18,6 +23,7 @@
       </div>
     <% end %>
 
+<<<<<<< HEAD
     <div class="container_new_specialities sombra_speciality cambio_div_alum_rec">
       <%= image_tag("lap.png", class: "lap_alum_recom")%>
       <p class="welcome_alum_recom welcome_new_specialities">ALUMNO</p>
@@ -60,4 +66,60 @@
       </div>
     <% end %>
   </div>
+=======
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :apellidoPaterno %>
+      <%= f.text_field :apellidoPaterno %>
+    </div>
+
+    <div class="field">
+      <%= f.label :apellidoMaterno %>
+      <%= f.text_field :apellidoMaterno %>
+    </div>
+
+    <div class="field">
+      <%= f.label :examMark %>
+      <%= f.text_field :examMark %>
+    </div>
+
+    <div class="field">
+      <%= f.label :schoolAverage %>
+      <%= f.text_field :schoolAverage %>
+    </div>
+
+    <div class="field">
+      <%= f.label :speciality %>
+      <%= f.text_field :speciality %>
+    </div>
+
+    <div class="field">
+      <%= f.label :secondSpeciality %>
+      <%= f.text_field :secondSpeciality %>
+    </div>
+
+    <div class="field">
+      <%= f.label :finalSpeciality %>
+      <%= f.text_field :finalSpeciality %>
+    </div>
+
+    <div class="field">
+      <%= f.label :turn %>
+      <%= f.text_field :turn %>
+    </div>
+
+    <div class="field">
+      <%= f.label :group %>
+      <%= f.text_field :group %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+>>>>>>> LaMeraMera
 </section>
