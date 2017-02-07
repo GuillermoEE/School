@@ -1,0 +1,24 @@
+<%= render 'helpersLayout/publicHeader' %>
+
+<section class="admisiones " >
+  <div class="actions sombra">
+    <div class="title">
+      <span class="icon-"></span>
+      <h1 class="fuente">ADMISIONES</h1>
+    </div>
+    <% if Accepted.all.length > 0%>
+      <div class="action" id="ver_matutino">
+        <div class="moveTMV"><h2 class="fuente">TM</h2></div>
+        <h2 class="fuente">Turno matutino</h2>
+      </div>
+      <div class="action" id="ver_vespertino">
+        <div class="moveTMV"><h2 class="fuente">TV</h2></div>
+        <h2 class="fuente">Turno vespertino</h2>
+      </div>
+  <% end %>
+  </div>
+  <% if Accepted.all.length > 0%>
+    <%= render 'helpersLayout/groupsFinder' %>
+    <%= render 'helpersLayout/groupsLayout' %>
+  <% end %>
+</section>

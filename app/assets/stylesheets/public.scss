@@ -1,0 +1,221 @@
+// Place all the styles related to the public controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*   Mover a la zona general   */
+
+.header{
+  position: fixed;
+  width: 100%;
+}
+
+.flexBox{
+  display: flex;
+}
+
+.mainBox{
+  padding-top: 10%;
+}
+
+.content{
+  text-align: center;
+  background-color: white;
+  width: 70%;
+  margin-left: 80px;
+}
+
+.actions{
+  position: fixed;
+  left: 1%;
+  width: 18%;
+  background-color: white;
+
+}
+.actions .title{
+  text-align: center;
+  padding: 3%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  color: white;
+  background-color: #1EBEF0;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.actions .action{
+  color:  #1EBEF0;
+  padding: 6%;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  border-top: 1px;
+  border-color: grey;
+  border-style: solid;
+}
+
+.actions .action:hover{
+  border-left: solid 5px #1EBEF0;
+}
+
+/* Estilos para admisiones */
+
+
+.hide{
+  display: none;
+}
+.move_table{
+  margin-left: 20px;
+}
+
+.groups_table .title{
+  font-size: 1.5em;
+}
+.group_select{
+  font-size: 1.1em;
+  cursor: pointer;
+  display: flex;
+  background-color: white;
+  padding: 5%;
+  border-top:1px;
+  border-color: grey;
+  border-style: solid;
+}
+.group_select:hover{
+
+}
+.moveTMV{
+  font-size: 20px;
+  margin-right: 10px;
+}
+.admisiones{
+  margin-top: 70px;
+}
+.groupAll{
+  margin-left: 300px;
+  width: 20%;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.sombra{
+    -webkit-box-shadow: 1px 3px 8px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 3px 8px -1px rgba(0,0,0,0.75);
+  box-shadow: 1px 3px 8px -1px rgba(0,0,0,0.75);
+}
+.group_turn{
+  background-color: #1EBEF0;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.moveGroup_turn{
+  background-color: white;
+}
+.group{
+  width: 600px;
+}
+.groupsHeader{ /*Modificar la cabezera de los grupos*/
+  background-color: #1EBEF0;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+.specia{
+  color: grey;
+  margin-top: 11px;
+}
+
+.speciality_header{
+  background-color: #1EBEF0;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+.tama{
+  font-size: 13px;
+}
+.tama2{
+  font-size: 17px;
+}
+.hojas{
+  margin-left: 600px;
+}
+.groupType{
+  background-color: #1EBEF0;
+  padding: 10px;
+  margin-right: 20px;
+  padding-right: 12px;
+  padding-left: 12px;
+  width: 11px;
+  border-radius: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+
+/*Inicio*/
+#box{
+  display: flex;
+  margin-left: 100px;
+}
+#welcome{
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+#parrafo{
+  font-family: 'Open Sans', sans-serif;
+}
+#boxMain{
+  background-color: #43BAC2;
+  padding-top: 140px;
+  padding-bottom: 100px;
+  color: white;
+}
+#mainheader{
+  background-color: white;
+  color: grey;
+}
+#mainheader .button{
+  color: grey;
+  font-weight: bold;
+}
+footer{
+  background-color: white;
+}
+#final{
+  color: grey;
+  margin-left: 180px;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 35px;
+  display: flex;
+  padding-bottom: 27px;
+}
+#text{
+  margin-top: 8px;
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: 1;
+}
+#login1 a{
+  color: grey;
+  text-decoration: none;
+}
+#login1{
+  margin-top: 8px;
+}
+#login1 a:hover{
+  background-color: white;
+  color: #1EBEF0;;
+}
+#login1:hover{
+  color: #1A90A5;
+}
+#lap{
+  margin-left: 80px;
+}
+#move_logo{
+  margin-left: 100px;
+}

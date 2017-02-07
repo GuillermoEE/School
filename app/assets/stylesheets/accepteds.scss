@@ -1,0 +1,90 @@
+// Place all the styles related to the accepteds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*Diseño de grupos*/
+
+/*Parte de las acciones de los grupos*/
+.acceptedSection{
+  padding-top: 10%;
+  margin-left: 30px;
+  display: flex;
+}
+.groupAc{
+  background-color: #393442;
+  width: 250px;
+  height: 10%;
+
+}
+.move_grupo{
+  padding: 17px;
+}
+.grupoT{
+  background-color: #43BAC2;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+.actionsG ul li{
+  padding: 7%;
+  border-top: 1px solid grey;
+}
+.actionsG ul li a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+.actionsG li ul{
+  display: none;
+}
+.actionsG li:hover > ul{
+  display: block;
+}
+.caca{
+  cursor: pointer;
+}
+
+/*Lista de los grupos*/
+.groupAll_grupos{
+  margin-left: 160px;
+  width: 60%;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.hojas_groups{
+  margin-left: 300px;
+}
+.groupsHeader_groups{
+  background-color: #43BAC2;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.unColor{
+  color: red;
+}
+.groupType_groups{
+  background-color:#43BAC2; 
+  padding: 10px;
+  margin-right: 20px;
+  padding-right: 12px;
+  padding-left: 12px;
+  width: 11px;
+  border-radius: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+.group_turn_groups{
+  background-color: #43BAC2;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}

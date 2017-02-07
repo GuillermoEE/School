@@ -1,0 +1,33 @@
+  <header class="header">
+    <%= image_tag('logo.png',:width => 180, :height => 30, :id => 'titulo'  )  %>
+      <div id="bar">
+        <nav>
+          <ul>
+            <li> <a class="boton" href="/index">INICIO</a></li>
+            <li> <a class="boton" href="/admisiones">ADMISIONES</a></li>
+            <%if can? :manage, Request %>
+            <li> <a class="boton" href="requests">SOLICITUDES</a></li>
+            <% end %>
+            <li> <a class="boton" href="specialities">ESPECIALIDADES</a></li>
+            <li> <a class="boton" href="/desarolladores">DESARROLLADORES</a></li>
+            <%if Accepted.all.length > 0%>
+            <li> <a class="boton" id="gen" href="/grupos">GRUPOS</a></li>
+            <%else%>
+            <li><a class="boton" id="gen" href="/generate">GENERAR GRUPOS</a></li>
+            <%if can? :manage, Accepted %>
+            <li> <a class="boton" id="gen" href="/admin">ADMIN</a></li>
+            <% end %>
+            <%end%>
+          </ul>
+          </nav>
+        </div>
+      <div id="login">
+          <p class="navbar-text pull-right">
+        <span class="icon-user"></span>
+        <% if user_signed_in? %>
+        <%= link_to current_user.email, destroy_user_session_path, method: :delete  %>
+        <% else %>
+          <%= link_to "Iniciar sesión", new_user_session_path, :class => 'navbar-link'  %></li>
+        <% end %>
+      </div>
+  </header>

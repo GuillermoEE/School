@@ -1,0 +1,33 @@
+<header id="mainheader">
+  <%= image_tag('logoazul.png',:width => 180, :height => 30, :id => 'titulo'  )  %>
+  <div id="bar">
+    <nav>
+      <ul>
+        <li> <a class="button" href="/index">INICIO</a></li>
+        <li> <a class="button" href="/admisiones">ADMISIONES</a></li>
+        <li> <a class="button" href="/desarolladores">DESARROLLADORES</a></li>
+        <% if can? :manage, Request %>
+        <li> <a class="button" href="requests">SOLICITUDES</a></li>
+        <% end %>
+        <% if can? :manage , Speciality %>
+        <li> <a class="button" href="specialities">ESPECIALIDADES</a></li>
+        <% end %>
+        <% if can? :manage , Accepted %>
+        <li> <a class="button"  href="/grupos">GRUPOS</a></li>
+        <% end %>
+        <%if can? :manage, Accepted %>
+        <li> <a class="button" href="/admin">ADMIN</a></li>
+        <% end %>
+      </ul>
+      </nav>
+    </div>
+    <div id="login1">
+        <p class="navbar-text pull-right">
+      <span class="icon-user"></span>
+      <% if user_signed_in? %>
+      <%= link_to current_user.email, destroy_user_session_path, method: :delete  %>
+      <% else %>
+        <%= link_to "Iniciar sesión", new_user_session_path, :class => 'navbar-link'  %></li>
+      <% end %>
+    </div>
+</header>

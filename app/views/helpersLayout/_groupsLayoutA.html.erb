@@ -1,0 +1,57 @@
+<!-- Creamos un conteo de los grupos (Esto servirá de apoyo en JavaScript) !-->
+<% j = 0%>
+<% @groups.each do |g|%>
+<div class="hojas_groups">
+  <% j += 1%> <!-- Sumatoria del conteo de grupos !-->
+  <% turno = ":v" %>
+  <% if g[0][:turn] == "M" %>
+    <% turno = "Matutino" %>
+  <% elsif g[0][:turn] == "V" %>
+    <% turno = "Vespertino" %>
+  <% end %>
+
+  <!-- Creamos un section para cada grupo !-->
+  <div class="group content hide sombra  " id="group_<%=j%>">
+    <div class="groupsHeader_groups">
+      <!-- Imprimimos la especialidad y el turno !-->
+      <h1><%= g[0][:speciality] %> <%= turno %></h1>
+      <!-- Los grupos están generados con números 1, 2, 3... Así que llamamos al array con el alfabeto e intercambiamos los números por una letra A, B, C... !-->
+      <h2>Grupo <%= @groupIdentifier[g[0][:group]] %></h2>
+    </div>
+
+    <!-- Los grupos están guardados como M y V, así que hacemos vriables que indiquen cada uno pero como Matutino y Vespertino !-->
+    <table class="move_table">
+      <!-- Encabezado de la tabla !-->
+      <thead>
+        <tr>
+          <th class="tama2">No.</th>
+          <th class="tama2">Nombre</th>
+          <th class="tama2">Apellido Paterno</th>
+          <th class="tama2">Apellido Materno</th>
+          <th class="tama2">Calificacion del examen</th>
+        </tr>
+      </thead>
+
+      <!-- Agregamos los datos en las tablas dependiendo del grupo que se itera !-->
+      <tbody>
+        <% i = 0 %>
+        <% Accepted.all.where(finalSpeciality: g[0][:speciality], group: g[0][:group], turn: g[0][:turn]).each do |accepted| %>
+        <% i+=1 %>
+        <tr>
+          <td class="tama"><%= i %></td>
+          <td class="tama"><%= accepted.name %></td>
+          <td class="tama"><%= accepted.apellidoPaterno %></td>
+          <td class="tama"><%= accepted.apellidoMaterno %></td>
+          <td class="tama"><%= accepted.examMark %></td>
+          <td><%= link_to 'Show', accepted %></td>
+          <td><%= link_to 'Edit', edit_accepted_path(accepted) %></td>
+          <td><%= link_to 'Destroy', accepted, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+
+  </div>
+</div>
+<% end %>
