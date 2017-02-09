@@ -8,10 +8,10 @@
         <li> <a class="button" href="/desarolladores">DESARROLLADORES</a></li>
 
         <% if can? :manage, Request %>
-        <li> <a class="button" href="requests">SOLICITUDES</a></li>
+        <li> <a class="button" href="/requests">SOLICITUDES</a></li>
         <% end %>
         <% if can? :manage , Speciality %>
-        <li> <a class="button" href="specialities">ESPECIALIDADES</a></li>
+        <li> <a class="button" href="/specialities">ESPECIALIDADES</a></li>
         <% end %>
         <% if can? :manage , Accepted %>
         <li> <a class="button"  href="/grupos">GRUPOS</a></li>

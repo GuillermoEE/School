@@ -6,16 +6,17 @@ class Ability
     #
 
        user ||= User.new # guest user (not logged in)
-
+       if user.secretary?
+         can :manage, :Requests
+         can :manage, :Speciality
+       end
+       
        if user.admin?
          can :manage, :all
     #  else
     #     can :read, :all
       end#if
-       if user.secretary?
-         can :manage, :Requests
-         can :manage, :Speciality
-       end
+
 
     #
     # The first argument to `can` is the action you are giving the user

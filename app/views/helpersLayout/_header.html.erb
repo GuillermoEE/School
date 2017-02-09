@@ -7,9 +7,9 @@
             <li> <a class="boton" href="/admisiones">ADMISIONES</a></li>
 
             <%if can? :manage, Request %>
-            <li> <a class="boton" href="requests">SOLICITUDES</a></li>
+            <li> <a class="boton" href="/requests">SOLICITUDES</a></li>
             <% end %>
-            <li> <a class="boton" href="specialities">ESPECIALIDADES</a></li>
+            <li> <a class="boton" href="/specialities">ESPECIALIDADES</a></li>
             <li> <a class="boton" href="/desarolladores">DESARROLLADORES</a></li>
             <%if Accepted.all.length > 0%>
             <li> <a class="boton" id="gen" href="/grupos">GRUPOS</a></li>
