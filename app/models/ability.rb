@@ -10,7 +10,7 @@ class Ability
          can :manage, :Requests
          can :manage, :Speciality
        end
-       
+
        if user.admin?
          can :manage, :all
     #  else
