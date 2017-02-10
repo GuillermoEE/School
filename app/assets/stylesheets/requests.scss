@@ -37,7 +37,7 @@
   background-color: #43BAC2;
   color: white;
   border-radius: 3px;
-  font-size: 17px;
+  font-size: -100px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   padding: 50px;
@@ -118,7 +118,23 @@ table tbody tr td a{
   color: grey;
 }
 #actionR{
-  width: 280px;
+  width: 250px;
+}
+/*Estilos iconos de solicitudes*/
+/*requestNew*/
+
+.move_nuevaSo{
+  margin-left: 5px;
+  margin-top: 4px
+}
+.move_icon{
+  margin-left: 20px;
+}
+/*eliminar*/
+.eliminarSolicitudes{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 /*Buscador */
 
@@ -127,4 +143,7 @@ table tbody tr td a{
 }
 .edit_rq_index{
   margin-top: 10%;
+}
+.select{
+  background-color: red;
 }

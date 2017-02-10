@@ -3,21 +3,7 @@
 <%= render 'helpersLayout/header' %>
 
 <div class="container_solicitud mainBox">
-  <div id="actionR">
-    <div id="move_titu">
-      <h1 id="titu">SOLICITUDES</h1>
-    </div>
-    <div id="actions_request">
-      <ul>
-        <li><div class="moveActions_Request"><span class="icon-plus"></span> <p><%= link_to 'Nueva solicitud', new_request_path %></p></div></li>
-        <li><div class="moveActions_Request"><a href="/delateAll">eliminar</a></div></li>
-      </ul>
-    </div>
-  <%= form_tag import_requests_path, multipart: true do %>
-      <%= file_field_tag :file%>
-      <%= submit_tag "Importar"%>
-  <% end %>
-  </div>
+
 </div>
 
 <section class="PrincipalNewSpecialities mainBox">

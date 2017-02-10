@@ -219,7 +219,7 @@ class GroupsController < ApplicationController
   end#if
 
 
-=begin
+
   @accepted.each do |o|
     @accepted3.each do |j|
       if o.name == j.name and o.apellidoPaterno == j.apellidoPaterno and o.apellidoMaterno == j.apellidoMaterno
@@ -233,7 +233,8 @@ class GroupsController < ApplicationController
         @resto.push(x)
     end
   end
-=end
+
+
   end#generate
 
 

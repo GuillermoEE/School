@@ -43,9 +43,8 @@
           <td class="tama"><%= accepted.apellidoPaterno %></td>
           <td class="tama"><%= accepted.apellidoMaterno %></td>
           <td class="tama"><%= accepted.examMark %></td>
-          <td><%= link_to 'Show', accepted %></td>
-          <td><%= link_to 'Edit', edit_accepted_path(accepted) %></td>
-          <td><%= link_to 'Destroy', accepted, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '', edit_accepted_path(accepted), class:"icon-pencil"%></td>
+          <td><%= link_to '', accepted, method: :delete, class:"icon-bin2", data: { confirm: 'Are you sure?' } %></td>
         </tr>
         <% end %>
       </tbody>

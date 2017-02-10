@@ -33,6 +33,57 @@
   padding: 7%;
   border-top: 1px solid grey;
 }
+.displayFlexAction{
+  display: flex;
+}
+
+/*Estilos de los icononos para grupos*/
+
+/*Agregar*/
+.icon-plus{
+  color: #9C9C9C;
+  font-size: 33px;
+  margin: 0px;
+  margin-right: 10px;
+  height: 10px;
+  margin-top: -5px;
+}
+.actionsG ul li p{
+  margin-top: 3px;
+}
+
+/*Vaciar bases de datos*/
+.icon-bin{
+  color: #9C9C9C;
+  font-size: 25px;
+  margin-right: 15px;
+  margin-left: 3px;
+}
+.move_vaciar{
+  margin-top: 5px;
+}
+/*Revisar grupos*/
+.icon-address-book{
+  color: #9C9C9C;
+  font-size: 25px;
+  margin-left: 2px;
+  margin-right: 15px;
+}
+.move_revisarGrupos{
+  margin-top: -10px;
+}
+
+/*Turnos*/
+.turnos{
+  cursor: pointer;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+
+}
+.modi{
+  border-top:0px;
+}
+
 .actionsG ul li a{
   color: white;
   text-decoration: none;
@@ -45,9 +96,7 @@
 .actionsG li:hover > ul{
   display: block;
 }
-.caca{
-  cursor: pointer;
-}
+
 
 /*Lista de los grupos*/
 .groupAll_grupos{

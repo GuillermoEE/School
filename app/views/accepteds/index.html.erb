@@ -17,15 +17,15 @@
     </div>
     <div class="actionsG">
       <ul>
-        <li><p><%= link_to 'Agregar', new_accepted_path %></p></li>
-        <div class="",id="loading"><li><a href="/delateAll1">Vaciar bases de datos</a></li></div>
-        <li><a href="#">Revisar grupos</a>
+        <li class="displayFlexAction"><span class="icon-plus"></span><p><%= link_to 'Agregar', new_accepted_path %></p></li>
+        <li class="displayFlexAction" id="loading"> <span class="icon-bin"></span><a href="/delateAll1" class="move_vaciar">Vaciar bases de datos</a></li>
+        <li><span class="icon-address-book"></span><a href="#" class="move_revisarGrupos"> Revisar grupos </a>
           <ul>
-            <li>
-              <p id="ver_matutino" class="caca">Turno Matutino</p>
+            <li class="modi">
+              <p id="ver_matutino" class="turnos">Turno Matutino</p>
             </li>
             <li>
-              <p id="ver_vespertino" class="caca">Turno Verpertino</p>
+              <p id="ver_vespertino" class="turnos">Turno Verpertino</p>
             </li>
           </ul>
         </li>

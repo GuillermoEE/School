@@ -40,9 +40,9 @@
           <td class="etiqueta_solicitud especialidades_soli2"><%= speciality.morningClasses %></td>
           <td class="etiqueta_solicitud especialidades_soli2"><%= speciality.eveningClasses %></td>
           <td class="etiqueta_solicitud especialidades_soli2"><%= speciality.numberStudents %></td>
-          <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'S', speciality %></td>
-          <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'E', edit_speciality_path(speciality) %></td>
-          <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'D', speciality, method: :delete, data: { confirm: '¿Desea eliminar el elemento?' } %></td>
+          <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', speciality, class:"icon-user" %></td>
+          <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', edit_speciality_path(speciality), class:"icon-pencil" %></td>
+          <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', speciality, method: :delete, class:"icon-bin2", data: { confirm: '¿Desea eliminar el elemento?' } %></td>
         </tr>
       <% end %>
     </tbody>
