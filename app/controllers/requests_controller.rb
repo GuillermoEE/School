@@ -6,7 +6,7 @@ class RequestsController < ApplicationController
   # GET /requests.json
   def index
 
-    authorize! :manage , Request
+    authorize! :update , Request
 
 
     @requests = Request.all
@@ -37,30 +37,30 @@ class RequestsController < ApplicationController
   # GET /requests/1.json
   def show
 
-    authorize! :manage , Request
+    authorize! :show , Request
   end
 
   def delateAll
-      authorize! :manage , Request
+      authorize! :destroy , Request
       Request.destroy_all
 
   end
 
   # GET /requests/new
   def new
-    authorize! :manage , Request
+    authorize! :create , Request
     @request = Request.new
   end
 
   # GET /requests/1/edit
   def edit
-    authorize! :manage , Request
+    authorize! :edit , Request
   end
 
   # POST /requests
   # POST /requests.json
   def create
-    authorize! :manage , Request
+    authorize! :create , Request
 
     @request = Request.new(request_params)
 
@@ -81,7 +81,7 @@ class RequestsController < ApplicationController
   # PATCH/PUT /requests/1.json
   def update
 
-    authorize! :manage , Request
+    authorize! :update , Request
 
     respond_to do |format|
       if @request.update(request_params)
@@ -98,7 +98,7 @@ class RequestsController < ApplicationController
   # DELETE /requests/1.json
   def destroy
 
-    authorize! :manage , Request
+    authorize! :destroy , Request
 
     @request.destroy
     respond_to do |format|
@@ -109,7 +109,7 @@ class RequestsController < ApplicationController
 
   def import
 
-    authorize! :manage , Request
+    authorize! :update , Request
 
     Request.import(params[:file])
     redirect_to requests_url, notice: "la base de datos fue importada correctamente"
