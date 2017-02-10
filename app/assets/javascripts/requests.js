@@ -24,7 +24,7 @@ $( document ).on('turbolinks:load', function() {
               if (index == data.length-1){
                 setTimeout(function(){
                   window.location.replace("/requests");
-                },100);
+                },150);
               }
             }
           });

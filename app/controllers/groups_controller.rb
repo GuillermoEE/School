@@ -2,8 +2,12 @@ class GroupsController < ApplicationController
 
 
 
+def index
+    authorize! :manage , Request
+end
 
   def generate
+      authorize! :manage , Request  
 
     # $accepted inidica el numero total de alumnos que seran aceptados en esa generacion
     $acceptedLimit = 0
