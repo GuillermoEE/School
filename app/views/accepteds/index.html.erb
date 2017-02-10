@@ -1,12 +1,4 @@
-<div id="load">
-  <div class="sk-folding-cube">
-    <div class="sk-cube1 sk-cube"></div>
-    <div class="sk-cube2 sk-cube"></div>
-    <div class="sk-cube4 sk-cube"></div>
-    <div class="sk-cube3 sk-cube"></div>
-  </div>
-  <hi>Loading, please wait...</hi>
-</div>
+
 <%= render 'helpersLayout/header' %>
 
 <section class="acceptedSection">
@@ -29,6 +21,7 @@
             </li>
           </ul>
         </li>
+
         <li>
           <%= form_tag(accepteds_path, :method => "get", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], placeholder: "", id: "buscador" %>

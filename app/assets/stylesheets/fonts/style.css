@@ -1,10 +1,18 @@
 @font-face {
   font-family: 'icomoon';
+<<<<<<< HEAD
   src:  url('fonts/icomoon.eot?gred5h');
   src:  url('fonts/icomoon.eot?gred5h#iefix') format('embedded-opentype'),
     url('fonts/icomoon.ttf?gred5h') format('truetype'),
     url('fonts/icomoon.woff?gred5h') format('woff'),
     url('fonts/icomoon.svg?gred5h#icomoon') format('svg');
+=======
+  src:  url('fonts/icomoon.eot?g5diqt');
+  src:  url('fonts/icomoon.eot?g5diqt#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?g5diqt') format('truetype'),
+    url('fonts/icomoon.woff?g5diqt') format('woff'),
+    url('fonts/icomoon.svg?g5diqt#icomoon') format('svg');
+>>>>>>> LaMeraMera
   font-weight: normal;
   font-style: normal;
 }
@@ -27,6 +35,7 @@
 .icon-plus:before {
   content: "\e902";
 }
+<<<<<<< HEAD
 .icon-pencil:before {
   content: "\e909";
 }
@@ -39,12 +48,15 @@
 .icon-download:before {
   content: "\e905";
 }
+=======
+>>>>>>> LaMeraMera
 .icon-user:before {
   content: "\e900";
 }
 .icon-user-plus:before {
   content: "\e901";
 }
+<<<<<<< HEAD
 .icon-key:before {
   content: "\e90a";
 }
@@ -69,4 +81,6 @@
 .icon-mail:before {
   content: "\e90e";
 }
+=======
+>>>>>>> LaMeraMera
 

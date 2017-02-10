@@ -10,6 +10,12 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 
+#default: &default
+#  adapter: sqlite3
+#  pool: 50
+#  timeout: 50000
+
+
 default: &default
   adapter: mysql2
   encoding: utf8
@@ -17,7 +23,10 @@ default: &default
   username: root
   password: 123
   socket: /var/run/mysqld/mysqld.sock
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0ebf6718ee2bdfacda207bdd921996fc645a001c
 
 
 development:

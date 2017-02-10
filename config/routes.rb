@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   resources :accepteds
   resources :allaccepteds
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  resources :accepteds
+
   devise_for :users
   #parte publica
   get 'admisiones' => 'public#admisiones'
@@ -12,14 +15,22 @@ Rails.application.routes.draw do
 
   root 'public#index'
 
+
+  get 'delateAll' =>'requests#delateAll'
+
+
   get 'delateAll1' =>'accepteds#delateAll1'
 
   get 'index' => 'public#index'
+
+  get 'grupos' => 'accepteds#index'
 
   #gruups
   get 'generate' => 'groups#generate'
 
   get 'generarGru' => 'groups#saveGroups'
+
+  get 'groups/generate'
 
   resources :requests do
     collection { post :import}

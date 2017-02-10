@@ -5,6 +5,7 @@
 <section class="PrincipalNewSpecialities mainBox">
 
 
+
   <%= form_for(accepted) do |f| %>
     <% if accepted.errors.any? %>
       <div id="error_explanation">
@@ -17,6 +18,7 @@
         </ul>
       </div>
     <% end %>
+
 
     <div class="container_new_specialities sombra_speciality cambio_div_alum_rec">
       <%= image_tag("lap.png", class: "lap_alum_recom")%>
@@ -60,4 +62,5 @@
       </div>
     <% end %>
   </div>
+
 </section>

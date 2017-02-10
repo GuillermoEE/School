@@ -5,13 +5,20 @@
           <ul>
             <li> <a class="boton" href="/index">INICIO</a></li>
             <li> <a class="boton" href="/admisiones">ADMISIONES</a></li>
-            <li> <a class="boton" href="/requests">SOLICITUDES</a></li>
-            <li> <a class="boton" href="/specialities">ESPECIALIDADES</a></li>
+
+            <%if can? :manage, Request %>
+            <li> <a class="boton" href="requests">SOLICITUDES</a></li>
+            <% end %>
+            <li> <a class="boton" href="specialities">ESPECIALIDADES</a></li>
             <li> <a class="boton" href="/desarolladores">DESARROLLADORES</a></li>
             <%if Accepted.all.length > 0%>
             <li> <a class="boton"  href="/accepteds">GRUPOS</a></li>
             <%else%>
             <li><a class="boton" id="gen" href="/generate">GENERAR GRUPOS</a></li>
+            <%if can? :manage, Accepted %>
+            <li> <a class="button" id="gen" href="/admin">ADMIN</a></li>
+            <% end %>
+
             <%end%>
           </ul>
           </nav>

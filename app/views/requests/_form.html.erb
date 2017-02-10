@@ -1,3 +1,4 @@
+
 <%= stylesheet_link_tag "application", :media => "all" %>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <%= render 'helpersLayout/header' %>
@@ -8,10 +9,12 @@
 
 <section class="PrincipalNewSpecialities mainBox">
 
+
   <%= form_for(request) do |f| %>
     <% if request.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(request.errors.count, "error") %> prohibited this request from being saved:</h2>
+
         <ul>
         <% request.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -19,6 +22,7 @@
         </ul>
       </div>
     <% end %>
+
 
     <div class="container_solicitud2">
 
@@ -79,5 +83,6 @@
 
       </div>
     </div>
+
   <% end %>
 </section>

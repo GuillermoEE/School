@@ -1,6 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
+
 $( document ).on('turbolinks:load', function() {
 
   //Iniciamos un nuevo evento en espera de click
@@ -33,3 +34,4 @@ $( document ).on('turbolinks:load', function() {
   });
 
 });
+// You can use CoffeeScript in this file: http://coffeescript.org/

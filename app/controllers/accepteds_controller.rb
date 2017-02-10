@@ -5,6 +5,7 @@ class AcceptedsController < ApplicationController
   # GET /accepteds
   # GET /accepteds.json
   def index
+      authorize! :manage , Request
     @accepteds = Accepted.all
 
     #buscador en la zona de grupos
@@ -60,6 +61,7 @@ class AcceptedsController < ApplicationController
   end
 
   def delateAll1
+      authorize! :manage , Request
       #Request.destroy_all
       Allaccepted.destroy_all
       Accepted.destroy_all
@@ -68,6 +70,7 @@ class AcceptedsController < ApplicationController
   # POST /accepteds
   # POST /accepteds.json
   def create
+      authorize! :manage , Request
     @accepted = Accepted.new(accepted_params)
 
     respond_to do |format|
@@ -98,6 +101,7 @@ class AcceptedsController < ApplicationController
   # DELETE /accepteds/1
   # DELETE /accepteds/1.json
   def destroy
+      authorize! :manage , Request
     @accepted.destroy
     respond_to do |format|
       format.html { redirect_to accepteds_url, notice: 'Accepted was successfully destroyed.' }
