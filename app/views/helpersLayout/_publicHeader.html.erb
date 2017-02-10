@@ -7,10 +7,10 @@
         <li> <a class="button" href="/admisiones">ADMISIONES</a></li>
         <li> <a class="button" href="/desarolladores">DESARROLLADORES</a></li>
 
-        <% if can? :manage, Request %>
+        <% if can? :update, Request %>
         <li> <a class="button" href="/requests">SOLICITUDES</a></li>
         <% end %>
-        <% if can? :manage , Speciality %>
+        <% if can? :update ,  Accepted %>
         <li> <a class="button" href="/specialities">ESPECIALIDADES</a></li>
         <% end %>
         <% if can? :manage , Accepted %>
