@@ -110,7 +110,6 @@ class RequestsController < ApplicationController
   def import
 
     authorize! :update , Request
-
     Request.import(params[:file])
     redirect_to requests_url, notice: "la base de datos fue importada correctamente"
   end

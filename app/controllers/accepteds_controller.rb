@@ -5,7 +5,7 @@ class AcceptedsController < ApplicationController
   # GET /accepteds
   # GET /accepteds.json
   def index
-      authorize! :manage , Request
+      authorize! :update , Accepted
     @accepteds = Accepted.all
 
     #buscador en la zona de grupos
@@ -49,19 +49,22 @@ class AcceptedsController < ApplicationController
   # GET /accepteds/1
   # GET /accepteds/1.json
   def show
+      authorize! :show , Accepted
   end
 
   # GET /accepteds/new
   def new
+      authorize! :create , Accepted
     @accepted = Accepted.new
   end
 
   # GET /accepteds/1/edit
   def edit
+      authorize! :edit , Accepted
   end
 
   def delateAll1
-      authorize! :manage , Request
+      authorize! :destroy , Accepted
       #Request.destroy_all
       Allaccepted.destroy_all
       Accepted.destroy_all
@@ -70,7 +73,7 @@ class AcceptedsController < ApplicationController
   # POST /accepteds
   # POST /accepteds.json
   def create
-      authorize! :manage , Request
+        authorize! :create , Accepted
     @accepted = Accepted.new(accepted_params)
 
     respond_to do |format|
@@ -87,6 +90,7 @@ class AcceptedsController < ApplicationController
   # PATCH/PUT /accepteds/1
   # PATCH/PUT /accepteds/1.json
   def update
+      authorize! :destroy , Accepted
     respond_to do |format|
       if @accepted.update(accepted_params)
         format.html { redirect_to @accepted, notice: 'Accepted was successfully updated.' }
@@ -101,6 +105,7 @@ class AcceptedsController < ApplicationController
   # DELETE /accepteds/1
   # DELETE /accepteds/1.json
   def destroy
+      authorize! :destroy , Accepted
       authorize! :manage , Request
     @accepted.destroy
     respond_to do |format|

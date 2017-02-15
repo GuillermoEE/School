@@ -19,19 +19,15 @@
             <li>
               <p id="ver_vespertino" class="turnos">Turno Verpertino</p>
             </li>
+            <li>
+              <p id="ver_none" class="turnos">Sin especialidad</p>
+            </li>
           </ul>
         </li>
 
-        <li>
-          <%= form_tag(accepteds_path, :method => "get", id: "search-form") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "", id: "buscador" %>
-          <%= submit_tag "Buscar", :name => nil, id: "buscadorBotton" %>
-          <% end %>
-        </li>
       </ul>
     </div>
   </div>
-
   <div class="renders">
     <% if Accepted.all.length > 0%>
       <%= render 'helpersLayout/groupsFinderA' %>

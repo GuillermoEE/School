@@ -1,8 +1,11 @@
 class Request < ApplicationRecord
   def self.import(file)
-    CSV.foreach(file.path, headers: true, :encoding => 'utf-8') do |row|
-      Request.create! row.to_hash
+      CSV.foreach(file.path, headers: true, :encoding => 'utf-8') do |row|
+        Request.create! row.to_hash
+  
+
     end
+
   end
 
   def self.to_csv

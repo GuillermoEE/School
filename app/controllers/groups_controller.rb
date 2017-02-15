@@ -7,7 +7,7 @@ def index
 end
 
   def generate
-      authorize! :manage , Request  
+      authorize! :manage , Request
 
     # $accepted inidica el numero total de alumnos que seran aceptados en esa generacion
     $acceptedLimit = 0
@@ -77,6 +77,7 @@ end
     @accepted2 = Array.new
     @accepted3 = Array.new
     @resto = Array.new
+    @restoSave = Array.new
 
     @allAccepted1.each do |r|
       @allAccepted2.push(Allaccepted.new({
@@ -216,27 +217,52 @@ end
     end#accepted3
   end#Speciality
 
+    @accepted.each do |o|
+      @accepted3.each do |j|
+        if o.name == j.name and o.apellidoPaterno == j.apellidoPaterno and o.apellidoMaterno == j.apellidoMaterno
+          o.speciality = "listo"
+        end#if
+      end#accepted2
+    end#accepted
+
+    @accepted.each do |x|
+        if x.speciality != "listo"
+          @resto.push(x)
+      end
+    end
+
+    @resto.each do |x|
+      x.finalSpeciality = "null"
+    end
+
+    @resto.each do |r|
+      @restoSave.push(Accepted.new({
+          :name => r.name,
+          :apellidoPaterno => r.apellidoPaterno,
+          :apellidoMaterno => r.apellidoMaterno,
+          :examMark => r.examMark,
+          :schoolAverage => r.schoolAverage,
+          :turn => "null",
+          :speciality => r.speciality,
+          :secondSpeciality => r.secondSpeciality,
+          :finalSpeciality  => "null",
+          :group => "null"
+        }))
+      end#accepted
+
+
     if Accepted.all.length < 1
       @accepted3.each do |x|
         x.save
       end#accepted
+      @restoSave.each do |o|
+        o.save
+      end
   end#if
 
 
 
-  @accepted.each do |o|
-    @accepted3.each do |j|
-      if o.name == j.name and o.apellidoPaterno == j.apellidoPaterno and o.apellidoMaterno == j.apellidoMaterno
-        o.name = "modificado"
-      end#if
-    end#accepted2
-  end#accepted
 
-  @accepted.each do |x|
-      if x.name != "modificado"
-        @resto.push(x)
-    end
-  end
 
 
   end#generate

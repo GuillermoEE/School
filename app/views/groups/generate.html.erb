@@ -1,16 +1,34 @@
-<<<<<<< HEAD
-<div class="actionsBox sombra">
-  <div class="boxImage">
-    <%= image_tag('gruposlogo.svg',:width => 200, :height => 150, :id => ''  )  %>
-  </div>
-  <div class="boxText">
-    <p class="boxTitulo">Los grupos se han generado correctamente</p>
-    <div class="description">
-      <p>Puedes verlos en la parte de admisiones y grupos</p>
-    </div>
-    <div class="returnBotton">
-      <a href="/accepteds"><%= image_tag('returnlogo.svg',:width => 50, :height => 100, :id => ''  )  %></a>
-    </div>
+<table>
+  <thead class="hola_sol">
+    <tr class="hola_sol">
+      <th class="etiqueta_solicitud cam_in_sol">Nombre</th>
+      <th class="etiqueta_solicitud cam_in_sol">Apellido paterno</th>
+      <th class="etiqueta_solicitud cam_in_sol">Apellido materno</th>
+      <th class="etiqueta_solicitud cam_in_sol">Examen</th>
+      <th class="etiqueta_solicitud cam_in_sol">Secundaria</th>
+      <th class="etiqueta_solicitud cam_in_sol">Primera Especialidad</th>
+      <th class="etiqueta_solicitud cam_in_sol">Segunda Especialidad</th>
 
-  </div>
-</div>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Accepted.all.where(finalSpeciality: "null").each do |request| %>
+      <tr>
+
+        <td class="etiqueta_solicitud especialidades_soli"><%= request.name %></td>
+        <td class="etiqueta_solicitud especialidades_soli2"><%= request.apellidoPaterno %></td>
+        <td class="etiqueta_solicitud especialidades_soli2"><%= request.apellidoMaterno %></td>
+        <td class="etiqueta_solicitud especialidades_soli2"><%= request.examMark %></td>
+        <td class="etiqueta_solicitud especialidades_soli2"><%= request.schoolAverage %></td>
+        <td class="etiqueta_solicitud especialidades_soli2"><%= request.speciality %></td>
+        <td class="etiqueta_solicitud especialidades_soli2"><%= request.secondSpeciality %></td>
+        <td class="etiqueta_solicitud especialidades_soli2"><%= request.finalSpeciality %></td>
+        <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', edit_request_path(request), class:"icon-pencil" %></td>
+        <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', request, method: :delete, class:"icon-bin2", data: { confirm: '¿Desea eliminar el elemento?' } %></td>
+      </tr>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -33,8 +33,10 @@ $( document ).on('turbolinks:load', function() {
           }//end of the for cycle
         }//end of if o.morningTurn condition
 
+
       });//end of the jQuery.each method
 
+      //Alumnos aceptados sin grupo
       var i;
       for (i = 1; i <= groups.length; i++) {
         $('#select_group_'+i).click(function(event){
@@ -55,6 +57,7 @@ $( document ).on('turbolinks:load', function() {
   $('#ver_matutino').click(function(){
     $('#list_v').slideUp(400);
     $('.group').slideUp(400);
+    $('#none_group').slideUp(400);
     setTimeout(function(){
       $('#list_m').slideDown(400);
     }, 600);
@@ -63,8 +66,18 @@ $( document ).on('turbolinks:load', function() {
   $('#ver_vespertino').click(function(){
     $('#list_m').slideUp(400);
     $('.group').slideUp(400);
+    $('#none_group').slideUp(400);
     setTimeout(function(){
       $('#list_v').slideDown(400);
+    }, 600);
+  });//end of click method
+
+  $('#ver_none').click(function(){
+    $('#list_m').slideUp(400);
+    $('#list_v').slideUp(400);
+    $('.group').slideUp(400);
+    setTimeout(function(){
+      $('#none_group').slideDown(400);
     }, 600);
   });//end of click method
 

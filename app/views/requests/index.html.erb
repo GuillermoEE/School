@@ -25,17 +25,11 @@
         <li>
           <div class="moveActions_Request">
             <%= form_tag import_requests_path, multipart: true do  %>
-                <%= file_field_tag :file, class: "select"%>
-                <%= submit_tag "Importar", :id =>"loading", class: "select"%>
+                <%= file_field_tag :file%>
+          
+                <%= submit_tag "Importar", :id =>"loading"%>
+
             <% end %>
-          </div>
-        </li>s
-        <li>
-          <div class="moveActions_Request">
-              <%= form_tag(requests_path, :method => "get", id: "search-form") do %>
-                <%= text_field_tag :search, params[:search], placeholder: "", id: "buscador"%>
-                <%= submit_tag "Buscar", :name => nil, id: "buscadorBotton" %>
-              <% end %>
           </div>
         </li>
       </ul>
@@ -73,14 +67,9 @@
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.schoolAverage %></td>
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.speciality %></td>
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.secondSpeciality %></td>
-<<<<<<< HEAD
             <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', edit_request_path(request), class:"icon-pencil" %></td>
             <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', request, method: :delete, class:"icon-bin2", data: { confirm: '¿Desea eliminar el elemento?' } %></td>
-=======
-            <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'E', edit_request_path(request) %></td>
-            <td class="etiqueta_solicitud especialidades_soli3"><%= link_to 'D', request, method: :delete, data: { confirm: '¿Desea eliminar el elemento?' } %></td>
 
->>>>>>> 0ebf6718ee2bdfacda207bdd921996fc645a001c
           </tr>
         <% end %>
       </tbody>

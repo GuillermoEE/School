@@ -6,7 +6,7 @@ class Ability
     #
 
        user ||= User.new # guest user (not logged in)
-       if user.secretary = true
+       if user.secretary?
          can :update, Request
          can :edit,  Request
          can :create, Request

@@ -4,26 +4,31 @@ class SpecialitiesController < ApplicationController
   # GET /specialities
   # GET /specialities.json
   def index
+      authorize! :update , Accepted
     @specialities = Speciality.all
   end
 
   # GET /specialities/1
   # GET /specialities/1.json
   def show
+      authorize! :show , Accepted
   end
 
   # GET /specialities/new
   def new
+      authorize! :new , Accepted
     @speciality = Speciality.new
   end
 
   # GET /specialities/1/edit
   def edit
+      authorize! :edit , Accepted
   end
 
   # POST /specialities
   # POST /specialities.json
   def create
+      authorize! :create , Accepted
     @speciality = Speciality.new(speciality_params)
 
     respond_to do |format|
@@ -54,6 +59,7 @@ class SpecialitiesController < ApplicationController
   # DELETE /specialities/1
   # DELETE /specialities/1.json
   def destroy
+      authorize! :destroy , Accepted
     @speciality.destroy
     respond_to do |format|
       format.html { redirect_to specialities_url, notice: 'Speciality was successfully destroyed.' }

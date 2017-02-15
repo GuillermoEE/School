@@ -1,7 +1,7 @@
 <!-- Creamos un conteo de los grupos (Esto servirá de apoyo en JavaScript) !-->
 <% j = 0%>
-<% @groups.each do |g|%>
 <div class="hojas_groups">
+<% @groups.each do |g|%>
   <% j += 1%> <!-- Sumatoria del conteo de grupos !-->
   <% turno = ":v" %>
   <% if g[0][:turn] == "M" %>
@@ -52,5 +52,45 @@
     </table>
 
   </div>
-</div>
 <% end %>
+  <!-- Creamos un section para cada grupo !-->
+  <div class="group content hide sombra" id="none_group">
+
+    <div class="groupsHeader_groups">
+      <p>Sin especialidad</p>
+    </div>
+    <table>
+      <thead >
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido paterno</th>
+          <th>Apellido materno</th>
+          <th>Examen</th>
+          <th>Secundaria</th>
+          <th>Primera Especialidad</th>
+          <th>Segunda Especialidad</th>
+
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% Accepted.all.where(finalSpeciality: "null").each do |accepted| %>
+          <tr>
+            <td class="filasmodi"><%=  accepted.name %></td>
+            <td  class="filasmodi"><%=  accepted.apellidoPaterno %></td>
+            <td  class="filasmodi"><%=  accepted.apellidoMaterno %></td>
+            <td  class="filasmodi"><%=  accepted.examMark %></td>
+            <td  class="filasmodi"><%=  accepted.schoolAverage %></td>
+            <td  class="filasmodi"><%=  accepted.speciality %></td>
+            <td  class="filasmodi"><%=  accepted.secondSpeciality %></td>
+            <td  class="filasmodi"><%= link_to '', edit_accepted_path( accepted), class:"icon-pencil" %></td>
+            <td  class="filasmodi"><%= link_to '',  accepted, method: :delete, class:"icon-bin2", data: { confirm: '¿Desea eliminar el elemento?' } %></td>
+          </tr>
+
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
