@@ -263,7 +263,7 @@ end
 
 
 
-
+  redirect_to "/grupos"
 
   end#generate
 

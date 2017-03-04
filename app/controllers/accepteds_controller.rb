@@ -69,6 +69,7 @@ class AcceptedsController < ApplicationController
       Allaccepted.destroy_all
       Accepted.destroy_all
       #Speciality.destroy_all
+      redirect_to "/grupos"
   end
   # POST /accepteds
   # POST /accepteds.json

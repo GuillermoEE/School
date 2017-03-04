@@ -34,6 +34,7 @@
           <%= image_tag("user.png", class: "user_solicitud")%>
           <p class="text_new_specialities soli_datos">Datos</p>
         </div>
+          <%=  link_to '<', requests_path, class: "back_link_edit_speciality back_request requests-boton-back" %>
       </div>
 
       <div class="formulario_solicitud">
@@ -80,7 +81,6 @@
         <div>
           <%= f.submit "CREAR", class:"btn-speciality mover_boton_solicitud" %>
         </div>
-
       </div>
     </div>
 

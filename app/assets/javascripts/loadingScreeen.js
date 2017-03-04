@@ -1,5 +1,5 @@
 
-$( document ).on('turbolinks:load', function() {
+$(document).on("turbolinks:load", function(){
   console.log("Ready");
 
   $('#load').hide();
@@ -12,14 +12,15 @@ function loadScreen(){
     $('#load').show();
   });
   $('#gen').click(function(){
-    $('section').hide();
+    
+    $('#actionsBox').hide();
     $('#load').show();
   });
 
   $('#loading1').click(function(){
-    $('section').hide();
+  $('section').hide();
     alert("Cargando , Por favor espere");
     $('#load').show();
-  });
+});
 
 }

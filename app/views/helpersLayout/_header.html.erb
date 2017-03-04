@@ -1,4 +1,17 @@
+
+
   <header class="header">
+
+    <div id="load">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+      <hi>Loading, please wait...</hi>
+    </div>
+
     <%= image_tag('logo.png',:width => 180, :height => 30, :id => 'titulo'  )  %>
       <div id="bar">
         <nav>
@@ -7,24 +20,17 @@
             <li> <a class="boton" href="/admisiones">ADMISIONES</a></li>
             <li> <a class="boton" href="/desarolladores">DESARROLLADORES</a></li>
             <%if can? :update, Request %>
-            <li> <a class="boton" href="requests">SOLICITUDES</a></li>
+            <li> <a class="boton" href="/requests">SOLICITUDES</a></li>
             <% end %>
             <%if can? :update, Accepted %>
-            <li> <a class="boton" href="specialities">ESPECIALIDADES</a></li>
+            <li> <a class="boton" href="/specialities">ESPECIALIDADES</a></li>
             <% end %>
-            <%if Accepted.all.length > 0%>
             <%if can? :update, Accepted %>
-            <li> <a class="boton" id="gen" href="/grupos">GRUPOS</a></li>
+            <li> <a class="boton"  href="/grupos">GRUPOS</a></li>
+              <% end %>
+              <%if can? :manage, Accepted %>
+            <li> <a class="boton"  href="/admin">ADMIN</a></li>
             <% end %>
-            <%else%>
-              <%if can? :update, Accepted %>
-            <li><a class="boton" id="gen" href="/generate">GENERAR GRUPOS</a></li>
-            <% end %>
-            <%if can? :manage, Accepted %>
-            <li> <a class="boton" id="gen" href="/admin">ADMIN</a></li>
-            <% end %>
-
-            <%end%>
           </ul>
           </nav>
         </div>

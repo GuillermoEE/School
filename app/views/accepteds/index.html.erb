@@ -9,6 +9,10 @@
     </div>
     <div class="actionsG">
       <ul>
+        <%if Accepted.all.length == 0%>
+          <li class="displayFlexAction" ><span class="icon-cog"></span><a class="move_generar" id="gen" href="/generate">GENERAR GRUPOS</a></li>
+        <%end%>
+      <%if Accepted.all.length > 0%>
         <li class="displayFlexAction"><span class="icon-plus"></span><p><%= link_to 'Agregar', new_accepted_path %></p></li>
         <li class="displayFlexAction" id="loading"> <span class="icon-bin"></span><a href="/delateAll1" class="move_vaciar">Vaciar bases de datos</a></li>
         <li><span class="icon-address-book"></span><a href="#" class="move_revisarGrupos"> Revisar grupos </a>
@@ -24,8 +28,8 @@
             </li>
           </ul>
         </li>
-
       </ul>
+      <%end%>
     </div>
   </div>
   <div class="renders">
