@@ -26,7 +26,11 @@
             <li>
               <p id="ver_none" class="turnos">Sin especialidad</p>
             </li>
+
           </ul>
+        </li>
+        <li >
+          <span class="icon-blocked"></span><p id="aparecer">mostrar</p>
         </li>
       </ul>
       <%end%>
@@ -36,6 +40,7 @@
     <% if Accepted.all.length > 0%>
       <%= render 'helpersLayout/groupsFinderA' %>
       <%= render 'helpersLayout/groupsLayoutA' %>
+      <%= render 'noAccepteds'%>
     <% end %>
   </div>
 </section>

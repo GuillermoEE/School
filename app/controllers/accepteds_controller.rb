@@ -4,16 +4,50 @@ class AcceptedsController < ApplicationController
 
   # GET /accepteds
   # GET /accepteds.json
+
+
+
   def index
       authorize! :update , Accepted
     @accepteds = Accepted.all
+    @noAccepted = Array.new
+    @solicitudes = Request.all
+    @rechazados = Array.new
+    @losAceptados = Allaccepted.all
+
+    @solicitudes.each do |o|
+      @losAceptados.each do |j|
+        if o.name == j.name and o.apellidoPaterno == j.apellidoPaterno and o.apellidoMaterno == j.apellidoMaterno
+          o.name = "modificado"
+        end#if
+      end#accepted2
+    end#accepted
+    @solicitudes.each do |x|
+      if x.name != "modificado"
+        @rechazados.push(x)
+      end
+    end
+
+
+
+
+
 
     #buscador en la zona de grupos
+
+
+
+
+
+
   if params[:search]
     @sgroups = Accepted.search(params[:search]).order("created_at DESC")
   else
     @sgroups = Accepted.all.order('created_at DESC')
   end
+
+
+
 
 
 #para  exportar en .csv

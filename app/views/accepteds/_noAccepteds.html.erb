@@ -1,0 +1,43 @@
+<script type="text/javascript">
+
+
+
+
+</script>
+
+<section id="rechazadosBox">
+    <div class="h1_sol_pri etiqueta_solicitud total_sol">
+      <p>Total de rechazados: <%=@rechazados.length%></p>
+    </div>
+
+    <table class="tablaRecha">
+      <thead class="hola_sol">
+        <tr class="hola_sol">
+          <th class="etiqueta_solicitud cam_in_sol">Nombre</th>
+          <th class="etiqueta_solicitud cam_in_sol">Apellido paterno</th>
+          <th class="etiqueta_solicitud cam_in_sol">Apellido materno</th>
+          <th class="etiqueta_solicitud cam_in_sol">Examen</th>
+          <th class="etiqueta_solicitud cam_in_sol">Secundaria</th>
+          <th class="etiqueta_solicitud cam_in_sol">Primera Especialidad</th>
+          <th class="etiqueta_solicitud cam_in_sol">Segunda Especialidad</th>
+
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody class="filasRecha">
+        <% @rechazados.each do |request| %>
+          <tr>
+            <td class="filasRecha"><%= request.name %></td>
+            <td class="filasRecha"><%= request.apellidoPaterno %></td>
+            <td class="filasRecha"><%= request.apellidoMaterno %></td>
+            <td class="filasRecha"><%= request.examMark %></td>
+            <td class="filasRecha"><%= request.schoolAverage %></td>
+            <td class="filasRecha"><%= request.speciality %></td>
+            <td class="filasRecha"><%= request.secondSpeciality %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+</section>
