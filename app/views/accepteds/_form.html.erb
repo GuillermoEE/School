@@ -18,7 +18,7 @@
         </ul>
       </div>
     <% end %>
-
+    <%@turnos = ['M','V']%>
 
     <div class="container_new_specialities sombra_speciality cambio_div_alum_rec">
       <%= image_tag("lap.png", class: "lap_alum_recom")%>
@@ -43,12 +43,12 @@
 
       <div>
         <%= f.label :finalSpeciality, "ESPECIALIDAD", class: "speciality_texto acomodar_alum_re"  %>
-        <%= f.text_field :finalSpeciality,class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re4" %>
+        <%= f.select(:finalSpeciality, options_for_select(@specialities), {}, {class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re4"})%>
       </div>
 
       <div>
         <%= f.label :turn, "TURNO", class: "speciality_texto acomodar_alum_re"  %>
-        <%= f.text_field :turn, class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re5" %>
+        <%= f.select(:turn, options_for_select(@turnos), {}, {class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re5"}) %>
       </div>
 
       <div>

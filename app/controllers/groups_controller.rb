@@ -195,25 +195,50 @@ end
 
     @i = 0
     @j = 0
+    @letra
     Speciality.all.each do |x|
       @m = x.morningClasses
       @v = x.eveningClasses
     @accepted3.each do |o|
       if o.turn == "M" and o.finalSpeciality == x.name
         @i += 1
+=begin
+        if @i == 1
+          @letra = 'A'
+        elsif @i == 2
+          @letra = 'B'
+        elsif @i == 3
+          @letra = 'C'
+        elsif @i == 4
+          @letra = 'D'
+        end#if
+=end
         o.group = @i
+
         if @i == @m
           @i = 0
-        end
-      end
+        end#if
+      end#if
       if o.turn == "V" and o.finalSpeciality == x.name
         @j += 1
+=begin
+        if @j == 1
+          @letra = 'A'
+        elsif @j == 2
+          @letra = 'B'
+        elsif @j == 3
+          @letra = 'C'
+        elsif @j == 4
+          @letra = 'D'
+        end#if
+=end
+
         o.group = @j
         if @j == @v
           @j = 0
-        end
+        end#if
 
-      end
+      end#if
     end#accepted3
   end#Speciality
 

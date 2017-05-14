@@ -1,6 +1,6 @@
 class AcceptedsController < ApplicationController
   before_action :set_accepted, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_specialities, only: [:new, :edit, :create]
 
   # GET /accepteds
   # GET /accepteds.json
@@ -154,6 +154,17 @@ class AcceptedsController < ApplicationController
     def set_accepted
       @accepted = Accepted.find(params[:id])
     end
+
+
+    def set_specialities
+      @specialities = Array.new
+
+      Speciality.all.each do |x|
+        @specialities.push(x.name.upcase)
+      end
+
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def accepted_params
