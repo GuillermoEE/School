@@ -10,31 +10,35 @@
 <section class="PrincipalNewSpecialities mainBox">
 
 
-  <%= form_for(request) do |f| %>
-    <% if request.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(request.errors.count, "error") %> prohibited this request from being saved:</h2>
-
-        <ul>
-        <% request.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-
 
     <div class="container_solicitud2">
+
+      <%= form_for(request) do |f| %>
 
       <div class="solicitud_y_textos">
         <p class="etiqueta_solicitud">Nueva Solicitud</p>
         <p class="solicitud_texto text_new_specialities">Aquí podrás añadir una nueva solicitud</p>
-
         <div class="datos_solicitud">
           <%= image_tag("user.png", class: "user_solicitud")%>
           <p class="text_new_specialities soli_datos">Datos</p>
         </div>
-          <%=  link_to '<', requests_path, class: "back_link_edit_speciality back_request requests-boton-back" %>
+      <div id="super">
+          <% if request.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(request.errors.count, "errores") %>   ,Corrije los errores para continuar</h2>
+
+              <ul>
+              <% request.errors.full_messages.each do |message| %>
+                <li>-<%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+
+        </div>
+
+
       </div>
 
       <div class="formulario_solicitud">
@@ -75,14 +79,14 @@
           <div class="mover_apellido_paterno margen_apeliido2 mover_esp2">
             <%= f.label :secondSpeciality, "SEGUNDA ESPECIALIDAD", class: "etiqueta_solicitud mover_solicitud_ele mover_solicitud_ele mover_ele" %>
             <%= f.select(:secondSpeciality, options_for_select(@specialities), {}, {:class => "form-input_solicitud mover_solicitud_ele mover_ele"})%>
-          </div>
-        <div>
 
-        <div>
-          <%= f.submit "CREAR", class:"btn-speciality mover_boton_solicitud" %>
-        </div>
+          </div>
       </div>
-    </div>
+
+      <div class="finalBo">
+        <a class="returBottom" href="/requests">Cancelar</a>
+        <%= f.submit "CREAR", class:"crearBottom" %>
+      </div>
 
   <% end %>
 </section>

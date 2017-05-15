@@ -1,5 +1,3 @@
 class Accepted < ApplicationRecord
-  def self.search(query)
-    where("name like ?", "%#{query}%")
-  end #sel.search
+  validates :name, :apellidoPaterno, :apellidoMaterno, presence: { message: "El campo no puede estar en blanco"}
 end

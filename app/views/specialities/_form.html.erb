@@ -7,17 +7,7 @@
 <section class="PrincipalNewSpecialities mainBox">
 
 <%= form_for(speciality) do |f| %>
-  <% if speciality.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(speciality.errors.count, "error") %> prohibited this speciality from being saved:</h2>
 
-      <ul>
-      <% speciality.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
 
   <div class="container_new_specialities sombra_speciality">
@@ -25,6 +15,8 @@
     <p class="text_new_specialities">Aquí podrás añadir una nueva especialidad</p>
     <%= image_tag("lap.png", class: "lap_new_specialities")%>
   </div>
+
+
 
   <div class="container_new_specialities2 sombra_speciality">
     <div>
@@ -61,6 +53,18 @@
       <%= f.submit "CREAR ESPECIALIDAD", class:"btn-speciality"%>
       <%= link_to 'CANCELAR', specialities_path, class: "btn-speciality acomodar_btn_speciality" %>
     </div>
+
+    <% if speciality.errors.any? %>
+      <div id="errorrs">
+        <h2><%= pluralize(speciality.errors.count, "errores") %>   ,Corrije los errores para continuar</h2>
+
+        <ul>
+        <% speciality.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
    <% end %>
   </div>
 </section>

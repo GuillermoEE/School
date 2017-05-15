@@ -22,7 +22,7 @@ end
   end #sel.search
 
   validates :name, :apellidoPaterno, :apellidoMaterno, presence: { message: "El campo no puede estar en blanco"}
-  validates :examMark, :schoolAverage, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 10 }
+  validates :examMark, :schoolAverage, :numericality => { :greater_than_or_equal_to => 6, :less_than_or_equal_to => 10, message: "Ingresa un numero que sea mayor 5 o un numero menor o igual a 10" }
   validate :validate_specialities
 
 

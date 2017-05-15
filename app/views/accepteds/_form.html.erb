@@ -8,14 +8,10 @@
 
   <%= form_for(accepted) do |f| %>
     <% if accepted.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(accepted.errors.count, "error") %> prohibited this accepted from being saved:</h2>
+      <div id="superError">
+        <h2><%= pluralize(accepted.errors.count, "campos sin rellenar") %>,    Llena los campos para continuar</h2>
 
-        <ul>
-        <% accepted.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
+
       </div>
     <% end %>
     <%@turnos = ['M','V']%>
