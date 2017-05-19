@@ -202,7 +202,7 @@ end
     @accepted3.each do |o|
       if o.turn == "M" and o.finalSpeciality == x.name
         @i += 1
-=begin
+
         if @i == 1
           @letra = 'A'
         elsif @i == 2
@@ -211,9 +211,11 @@ end
           @letra = 'C'
         elsif @i == 4
           @letra = 'D'
+        elsif @i == 5
+          @letra = 'E'
         end#if
-=end
-        o.group = @i
+
+        o.group = @letra
 
         if @i == @m
           @i = 0
@@ -221,7 +223,7 @@ end
       end#if
       if o.turn == "V" and o.finalSpeciality == x.name
         @j += 1
-=begin
+
         if @j == 1
           @letra = 'A'
         elsif @j == 2
@@ -230,10 +232,12 @@ end
           @letra = 'C'
         elsif @j == 4
           @letra = 'D'
+        elsif @j == 5
+          @letra = 'E'
         end#if
-=end
 
-        o.group = @j
+
+        o.group = @letra
         if @j == @v
           @j = 0
         end#if

@@ -18,7 +18,7 @@
     <% k+=1 #Este contador nos ayudará como referencia en JavaScript %>
       <% if g[0][:turn] == 'M' %>
       <div class="group_select" id="select_group_<%= k %>">
-        <div class="groupType"><%= @groupIdentifier[g[0][:group]] %></div> <div class="specia"><%= g[0][:speciality] %></div>
+        <div class="groupType"><%= g[0][:group] %></div> <div class="specia"><%= g[0][:speciality] %></div>
       </div>
       <% end %>
     <% end %>
@@ -37,7 +37,7 @@
     <% k+=1 #Este contador nos ayudará como referencia en JavaScript %>
       <% if g[0][:turn] == 'V' %>
       <div class="group_select" id="select_group_<%= k %>">
-        <div class="groupType"><%= @groupIdentifier[g[0][:group]] %></div> <div class="specia"><%= g[0][:speciality] %></div>
+        <div class="groupType"><%= g[0][:group] %></div> <div class="specia"><%= g[0][:speciality] %></div>
       </div>
       <% end %>
     <% end %>

@@ -46,10 +46,10 @@
         <%= f.label :turn, "TURNO", class: "speciality_texto acomodar_alum_re"  %>
         <%= f.select(:turn, options_for_select(@turnos), {}, {class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re5"}) %>
       </div>
-
+      <%@letrasGrupos = ['null', 'A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']%>
       <div>
         <%= f.label :group, "GRUPO", class: "speciality_texto acomodar_alum_re"  %>
-        <%= f.text_field :group, class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re6" %>
+        <%= f.select(:group, options_for_select(@letrasGrupos), {}, { class:"acomodar_alum_re2 form-input_speciality acomodar_alum_re6"}) %>
       </div>
 
       <div>

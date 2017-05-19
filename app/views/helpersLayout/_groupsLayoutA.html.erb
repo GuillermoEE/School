@@ -16,7 +16,7 @@
       <!-- Imprimimos la especialidad y el turno !-->
       <h1><%= g[0][:speciality] %> <%= turno %></h1>
       <!-- Los grupos están generados con números 1, 2, 3... Así que llamamos al array con el alfabeto e intercambiamos los números por una letra A, B, C... !-->
-      <h2>Grupo <%= @groupIdentifier[g[0][:group]] %></h2>
+      <h2>Grupo <%= g[0][:group]%></h2>
     </div>
 
     <!-- Los grupos están guardados como M y V, así que hacemos vriables que indiquen cada uno pero como Matutino y Vespertino !-->

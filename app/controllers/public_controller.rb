@@ -15,13 +15,13 @@ class PublicController < ApplicationController
       #Grupos de la mañana
       if s.morningTurn
         for i in (1..s.morningClasses)
-          @groups.push(Hash.new({:speciality => s.name, :turn => 'M' , :group => i }))
+          @groups.push(Hash.new({:speciality => s.name, :turn => 'M' , :group => @groupIdentifier[i] }))
         end #for Classes
       end #if else
       #Grupos de la tarde
       if s.eveningTurn
         for i in (1..s.eveningClasses)
-          @groups.push(Hash.new({:speciality => s.name, :turn => 'V' , :group => i }))
+          @groups.push(Hash.new({:speciality => s.name, :turn => 'V' , :group => @groupIdentifier[i] }))
         end #for Classes
       end #if else
 

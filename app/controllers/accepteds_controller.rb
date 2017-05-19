@@ -67,13 +67,13 @@ class AcceptedsController < ApplicationController
           #Grupos de la mañana
           if s.morningTurn
             for i in (1..s.morningClasses)
-              @groups.push(Hash.new({:speciality => s.name, :turn => 'M' , :group => i }))
+              @groups.push(Hash.new({:speciality => s.name, :turn => 'M' , :group => @groupIdentifier[i]  }))
             end #for Classes
           end #if else
           #Grupos de la tarde
           if s.eveningTurn
             for i in (1..s.eveningClasses)
-              @groups.push(Hash.new({:speciality => s.name, :turn => 'V' , :group => i }))
+              @groups.push(Hash.new({:speciality => s.name, :turn => 'V' , :group => @groupIdentifier[i]  }))
             end #for Classes
           end #if else
 
@@ -113,7 +113,7 @@ class AcceptedsController < ApplicationController
 
     respond_to do |format|
       if @accepted.save
-        format.html { redirect_to @accepted, notice: 'Accepted was successfully created.' }
+        format.html { redirect_to @accepted, notice: '' }
         format.json { render :show, status: :created, location: @accepted }
       else
         format.html { render :new }
@@ -128,7 +128,7 @@ class AcceptedsController < ApplicationController
       authorize! :destroy , Accepted
     respond_to do |format|
       if @accepted.update(accepted_params)
-        format.html { redirect_to @accepted, notice: 'Accepted was successfully updated.' }
+        format.html { redirect_to @accepted, notice: '' }
         format.json { render :show, status: :ok, location: @accepted }
       else
         format.html { render :edit }
@@ -144,7 +144,7 @@ class AcceptedsController < ApplicationController
       authorize! :manage , Request
     @accepted.destroy
     respond_to do |format|
-      format.html { redirect_to accepteds_url, notice: 'Accepted was successfully destroyed.' }
+      format.html { redirect_to accepteds_url, notice: '' }
       format.json { head :no_content }
     end
   end
