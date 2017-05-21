@@ -78,6 +78,7 @@ end
     @accepted3 = Array.new
     @resto = Array.new
     @restoSave = Array.new
+    @ABC= ['caca','A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
     @allAccepted1.each do |r|
       @allAccepted2.push(Allaccepted.new({
@@ -195,7 +196,8 @@ end
 
     @i = 0
     @j = 0
-    @letra
+    @letraM
+    @letraV
     Speciality.all.each do |x|
       @m = x.morningClasses
       @v = x.eveningClasses
@@ -203,19 +205,11 @@ end
       if o.turn == "M" and o.finalSpeciality == x.name
         @i += 1
 
-        if @i == 1
-          @letra = 'A'
-        elsif @i == 2
-          @letra = 'B'
-        elsif @i == 3
-          @letra = 'C'
-        elsif @i == 4
-          @letra = 'D'
-        elsif @i == 5
-          @letra = 'E'
-        end#if
+        if @i > @m
+          @i = 1
+        end
 
-        o.group = @letra
+        o.group = @ABC[@i]
 
         if @i == @m
           @i = 0
@@ -224,20 +218,12 @@ end
       if o.turn == "V" and o.finalSpeciality == x.name
         @j += 1
 
-        if @j == 1
-          @letra = 'A'
-        elsif @j == 2
-          @letra = 'B'
-        elsif @j == 3
-          @letra = 'C'
-        elsif @j == 4
-          @letra = 'D'
-        elsif @j == 5
-          @letra = 'E'
-        end#if
+        if @j > @v
+          @j = 1
+        end
 
+        o.group = @ABC[@j]
 
-        o.group = @letra
         if @j == @v
           @j = 0
         end#if
