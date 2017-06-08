@@ -12,48 +12,49 @@
 
 ActiveRecord::Schema.define(version: 20170107034618) do
 
-  create_table "accepteds", force: :cascade do |t|
+  create_table "accepteds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "apellidoPaterno"
     t.string   "apellidoMaterno"
-    t.decimal  "examMark"
-    t.decimal  "schoolAverage"
+    t.decimal  "examMark",         precision: 10
+    t.decimal  "schoolAverage",    precision: 10
     t.string   "speciality"
     t.string   "secondSpeciality"
     t.string   "finalSpeciality"
     t.string   "turn"
     t.string   "group"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.boolean  "isForeign"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
-  create_table "allaccepteds", force: :cascade do |t|
+  create_table "allaccepteds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "apellidoPaterno"
     t.string   "apellidoMaterno"
-    t.decimal  "examMark"
-    t.decimal  "schoolAverage"
+    t.decimal  "examMark",         precision: 10
+    t.decimal  "schoolAverage",    precision: 10
     t.boolean  "isForeign"
     t.string   "speciality"
     t.string   "secondSpeciality"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
-  create_table "requests", force: :cascade do |t|
-    t.string   "name",             null: false
+  create_table "requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                            null: false
     t.string   "apellidoPaterno"
     t.string   "apellidoMaterno"
-    t.decimal  "examMark"
-    t.decimal  "schoolAverage"
+    t.decimal  "examMark",         precision: 10
+    t.decimal  "schoolAverage",    precision: 10
     t.boolean  "isForeign"
     t.string   "speciality"
     t.string   "secondSpeciality"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
-  create_table "specialities", force: :cascade do |t|
+  create_table "specialities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.boolean  "morningTurn"
     t.boolean  "eveningTurn"
@@ -64,7 +65,7 @@ ActiveRecord::Schema.define(version: 20170107034618) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.boolean  "admin"
@@ -79,8 +80,8 @@ ActiveRecord::Schema.define(version: 20170107034618) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end

@@ -168,6 +168,6 @@ class AcceptedsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def accepted_params
-      params.require(:accepted).permit(:name, :apellidoPaterno, :apellidoMaterno, :examMark, :schoolAverage, :speciality, :secondSpeciality, :finalSpeciality, :turn, :group)
+      params.require(:accepted).permit(:name, :apellidoPaterno, :apellidoMaterno, :examMark, :schoolAverage, :speciality, :secondSpeciality, :finalSpeciality, :turn, :group, :isForeign)
     end
 end

@@ -11,6 +11,7 @@ class CreateAccepteds < ActiveRecord::Migration[5.0]
       t.string :finalSpeciality
       t.string :turn
       t.string :group
+      t.boolean :isForeign
 
       t.timestamps
     end

@@ -88,7 +88,8 @@ end
           :examMark => r.examMark,
           :schoolAverage => r.schoolAverage,
           :speciality => r.speciality,
-          :secondSpeciality => r.secondSpeciality
+          :secondSpeciality => r.secondSpeciality,
+          :isForeign => r.isForeign
         }))
       end#allAccepted1
 
@@ -114,6 +115,7 @@ end
                   :apellidoMaterno => r.apellidoMaterno,
                   :examMark => r.examMark,
                   :schoolAverage => r.schoolAverage,
+                  :isForeign => r.isForeign,
                   :turn => "null",
                   :speciality => r.speciality,
                   :secondSpeciality => r.secondSpeciality,
@@ -129,6 +131,7 @@ end
                     :apellidoMaterno => r.apellidoMaterno,
                     :examMark => r.examMark,
                     :schoolAverage => r.schoolAverage,
+                    :isForeign => r.isForeign,
                     :turn => "null",
                     :speciality => r.speciality,
                     :secondSpeciality => r.secondSpeciality,
@@ -257,6 +260,7 @@ end
           :apellidoMaterno => r.apellidoMaterno,
           :examMark => r.examMark,
           :schoolAverage => r.schoolAverage,
+          :isForeign => r.isForeign,
           :turn => "null",
           :speciality => r.speciality,
           :secondSpeciality => r.secondSpeciality,

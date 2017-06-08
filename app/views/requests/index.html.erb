@@ -26,7 +26,7 @@
           <div class="moveActions_Request">
             <%= form_tag import_requests_path, multipart: true do  %>
                 <%= file_field_tag :file%>
-          
+
                 <%= submit_tag "Importar", :id =>"loading"%>
 
             <% end %>
@@ -51,7 +51,7 @@
           <th class="etiqueta_solicitud cam_in_sol">Secundaria</th>
           <th class="etiqueta_solicitud cam_in_sol">Primera Especialidad</th>
           <th class="etiqueta_solicitud cam_in_sol">Segunda Especialidad</th>
-
+          <th class="etiqueta_solicitud cam_in_sol">Foraneo</th>
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -67,6 +67,7 @@
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.schoolAverage %></td>
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.speciality %></td>
             <td class="etiqueta_solicitud especialidades_soli2"><%= request.secondSpeciality %></td>
+            <td class="etiqueta_solicitud especialidades_soli2"><%= request.isForeign %></td>
             <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', edit_request_path(request), class:"icon-pencil" %></td>
             <td class="etiqueta_solicitud especialidades_soli3"><%= link_to '', request, method: :delete, class:"icon-bin2", data: { confirm: '¿Desea eliminar el elemento?' } %></td>
 
